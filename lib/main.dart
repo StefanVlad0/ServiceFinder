@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:servicefinder/login_page.dart';
+import 'package:servicefinder/signin_page.dart';
 import 'first_page.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: SignInPage(),
     );
   }
 }
