@@ -102,14 +102,23 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   ///Text "Don't have an account?"
-                  Text("Don’t have an account?",
-                      style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromRGBO(255, 255, 255, 0.4),
-                        fontSize: 16,
-                        letterSpacing: 1,
-                        decoration: TextDecoration.underline,
-                      )),
+                  InkWell(
+                    child: Text("Don’t have an account?",
+                        style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromRGBO(255, 255, 255, 0.4),
+                          fontSize: 16,
+                          letterSpacing: 1,
+                          decoration: TextDecoration.underline,
+                        )),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignInPage()),
+                      );
+                    },
+                  ),
 
                   ///Distanta dintre Dont't have an account si Logo
                   const SizedBox(
