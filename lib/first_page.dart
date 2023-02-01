@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:servicefinder/login_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -59,6 +60,19 @@ class _FirstPageState extends State<FirstPage> {
                   ),
 
                   ///Buton Login
+                  ///
+                  ElevatedButton(
+                    child: const Text('Open route'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()),
+                      );
+                    },
+                  ),
+
+                  ///
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 75),
                     child: Container(

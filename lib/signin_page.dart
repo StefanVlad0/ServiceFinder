@@ -17,6 +17,7 @@ class _SignInPageState extends State<SignInPage> {
       mobile: Scaffold(
           resizeToAvoidBottomInset: false,
           backgroundColor: const Color(0xFF000534),
+          appBar: AppBar(),
           body: SafeArea(
             child: Center(
               child: Column(
