@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:servicefinder/responsive.dart';
+import 'login_page.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -136,8 +137,43 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
             )),
-        desktop: Scaffold(
+        desktop: new Scaffold(
           backgroundColor: const Color(0xFF000534),
+          appBar: AppBar(
+              automaticallyImplyLeading: false,
+              backgroundColor: Color(0xFF000534),
+              actions: [
+                Row(
+                  children: [
+                    InkWell(
+                      child: Text('Login'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()),
+                        );
+                      },
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
+                      child: Text('Sign In'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignInPage()),
+                        );
+                      },
+                    ),
+                    SizedBox(
+                      width: 20,
+                    )
+                  ],
+                ),
+              ]),
           body: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

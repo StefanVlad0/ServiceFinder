@@ -138,8 +138,43 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           )),
-      desktop: Scaffold(
+      desktop: new Scaffold(
         backgroundColor: const Color(0xFF000534),
+        appBar: AppBar(
+            automaticallyImplyLeading: false,
+            backgroundColor: Color(0xFF000534),
+            actions: [
+              Row(
+                children: [
+                  InkWell(
+                    child: Text('Login'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()),
+                      );
+                    },
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  InkWell(
+                    child: Text('Sign In'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignInPage()),
+                      );
+                    },
+                  ),
+                  SizedBox(
+                    width: 20,
+                  )
+                ],
+              ),
+            ]),
         body: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
