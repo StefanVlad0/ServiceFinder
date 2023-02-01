@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:servicefinder/login_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -59,25 +60,28 @@ class _FirstPageState extends State<FirstPage> {
                   ),
 
                   ///Buton Login
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 75),
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(99, 26, 144, 0.5),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 26,
-                          ),
-                        ),
-                      ),
+                  ///
+                  ElevatedButton(
+                    child: Text('Login',
+                        style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 26,
+                        )),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF310F62),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 85, vertical: 20),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
                     ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()),
+                      );
+                    },
                   ),
 
                   ///Spatiu dintre buton login si "Don't have an account?"
