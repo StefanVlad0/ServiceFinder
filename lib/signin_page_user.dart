@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:servicefinder/responsive.dart';
+import 'package:go_router/go_router.dart';
 import 'login_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -146,22 +147,17 @@ class _SignInPageState extends State<SignInPage> {
                 Row(
                   children: [
                     InkWell(
-                      child: Text('Login'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginPage()),
-                        );
-                      },
-                    ),
+                        child: Text('Login'),
+                        onTap: () {
+                          return context.go('/loginPage');
+                        }),
                     SizedBox(
                       width: 20,
                     ),
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        Navigator.pushNamed(context, '/signinPage');
+                        return context.go('/signinPage');
                       },
                     ),
                     SizedBox(
@@ -296,7 +292,7 @@ class _SignInPageState extends State<SignInPage> {
                     InkWell(
                       child: Text('Login'),
                       onTap: () {
-                        Navigator.pushNamed(context, '/loginPage');
+                        return context.go('/loginPage');
                       },
                     ),
                     SizedBox(
@@ -305,7 +301,7 @@ class _SignInPageState extends State<SignInPage> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        Navigator.pushNamed(context, '/signinPage');
+                        return context.go('/signinPage');
                       },
                     ),
                     SizedBox(

@@ -4,15 +4,16 @@ import 'package:servicefinder/responsive.dart';
 import 'package:servicefinder/signin_page_user.dart';
 import 'package:go_router/go_router.dart';
 import 'main.dart';
+import 'responsive.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class TypeOfAcc extends StatefulWidget {
+  const TypeOfAcc({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<TypeOfAcc> createState() => _TypeOfAccState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _TypeOfAccState extends State<TypeOfAcc> {
   @override
   Widget build(BuildContext context) {
     return Responsive(
@@ -44,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                               width: 2,
                               color: Color.fromRGBO(255, 255, 255, 0.4)),
                         ),
-                        hintText: 'Email address',
+                        hintText: 'Email address modified',
                         hintStyle: TextStyle(
                           color: Color.fromRGBO(255, 255, 255, 0.4),
                           fontWeight: FontWeight.bold,
@@ -91,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       child: Center(
                         child: Text(
-                          'Login',
+                          'Sign in',
                           style: GoogleFonts.roboto(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -105,19 +106,6 @@ class _LoginPageState extends State<LoginPage> {
                   ///Spatiu dintre buton login si "Don't have an account?"
                   const SizedBox(
                     height: 60,
-                  ),
-
-                  ///Text "Don't have an account?"
-                  InkWell(
-                    child: Text("Don’t have an account?",
-                        style: GoogleFonts.roboto(
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(255, 255, 255, 0.4),
-                          fontSize: 16,
-                          letterSpacing: 1,
-                          decoration: TextDecoration.underline,
-                        )),
-                    onTap: () => context.go('/typeOfAccount'),
                   ),
 
                   ///Distanta dintre Dont't have an account si Logo
@@ -188,21 +176,9 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Container(
                       width: 500,
-                      child: TextField(
+                      child: Text(
+                        'What type of account do you want to create?',
                         style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 2,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Email address',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
                       ),
                     ),
                     Container(
@@ -240,7 +216,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         child: Center(
                           child: Text(
-                            'Login',
+                            'Sign in',
                             style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -253,19 +229,6 @@ class _LoginPageState extends State<LoginPage> {
 
                     SizedBox(
                       height: 20,
-                    ),
-                    InkWell(
-                      child: Text("Don’t have an account?",
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline,
-                          )),
-                      onTap: (() {
-                        return context.go('/typeOfAccount');
-                      }),
                     ),
                   ],
                 ),
@@ -337,7 +300,7 @@ class _LoginPageState extends State<LoginPage> {
                                 width: 2,
                                 color: Color.fromRGBO(255, 255, 255, 0.4)),
                           ),
-                          hintText: 'Email address',
+                          hintText: 'Email address modified',
                           hintStyle: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 0.4),
                             fontWeight: FontWeight.bold,
@@ -368,8 +331,6 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: 50,
                     ),
-
-                    ///Buton Sign In
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: Container(
@@ -380,7 +341,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         child: Center(
                           child: Text(
-                            'Login',
+                            'Sign In',
                             style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -390,22 +351,8 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-
                     SizedBox(
                       height: 20,
-                    ),
-                    InkWell(
-                      child: Text("Don’t have an account?",
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline,
-                          )),
-                      onTap: (() {
-                        return context.go('/typeOfAccount');
-                      }),
                     ),
                   ],
                 ),

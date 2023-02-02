@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';
+import 'package:servicefinder/TypeOfAcc.dart';
 import 'package:servicefinder/login_page.dart';
-import 'package:servicefinder/signin_page.dart';
+import 'package:servicefinder/signin_page_user.dart';
 import 'first_page.dart';
 
 void main() {
@@ -12,15 +15,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/firstPage',
-      routes: {
-        '/firstPage': (context) => const FirstPage(),
-        '/loginPage': (context) => const LoginPage(),
-        '/signinPage': (context) => const SignInPage(),
-      },
+    return MaterialApp.router(
+      routerConfig: router,
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
     );
   }
 }
+
+GoRouter router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/', //asta e initial page
+      builder: (context, state) => FirstPage(),
+    ),
+    GoRoute(
+      path: '/firstPage',
+      builder: (context, state) => FirstPage(),
+    ),
+    GoRoute(
+      path: '/signinPage',
+      builder: (context, state) => SignInPage(),
+    ),
+    GoRoute(
+      path: '/loginPage',
+      builder: (context, state) => LoginPage(),
+    ),
+    GoRoute(
+      path: '/typeOfAccount',
+      builder: (context, state) => TypeOfAcc(),
+    ),
+  ],
+);
