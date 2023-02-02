@@ -137,7 +137,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
             )),
-        desktop: new Scaffold(
+        desktop: Scaffold(
           backgroundColor: const Color(0xFF000534),
           appBar: AppBar(
               automaticallyImplyLeading: false,
@@ -161,11 +161,7 @@ class _SignInPageState extends State<SignInPage> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignInPage()),
-                        );
+                        Navigator.pushNamed(context, '/signinPage');
                       },
                     ),
                     SizedBox(
@@ -300,11 +296,7 @@ class _SignInPageState extends State<SignInPage> {
                     InkWell(
                       child: Text('Login'),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginPage()),
-                        );
+                        Navigator.pushNamed(context, '/loginPage');
                       },
                     ),
                     SizedBox(
@@ -313,11 +305,7 @@ class _SignInPageState extends State<SignInPage> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignInPage()),
-                        );
+                        Navigator.pushNamed(context, '/signinPage');
                       },
                     ),
                     SizedBox(

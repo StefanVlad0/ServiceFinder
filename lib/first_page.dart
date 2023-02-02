@@ -79,11 +79,7 @@ class _FirstPageState extends State<FirstPage> {
                             borderRadius: BorderRadius.circular(50)),
                       ),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginPage()),
-                        );
+                        Navigator.pushNamed(context, '/loginPage');
                       },
                     ),
 
@@ -122,11 +118,7 @@ class _FirstPageState extends State<FirstPage> {
                           padding: const EdgeInsets.symmetric(
                               vertical: 20, horizontal: 85)),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignInPage()),
-                        );
+                        Navigator.pushNamed(context, '/signinPage');
                       },
                     ),
                   ],
@@ -136,38 +128,37 @@ class _FirstPageState extends State<FirstPage> {
           )),
       desktop: Scaffold(
           backgroundColor: const Color(0xFF000534),
-          appBar: AppBar(backgroundColor: Color(0xFF000534), actions: [
-            Row(
-              children: [
-                InkWell(
-                  child: Text('Login'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()),
-                    );
-                  },
+          appBar: AppBar(
+              automaticallyImplyLeading: false,
+              backgroundColor: Color(0xFF000534),
+              actions: [
+                Row(
+                  children: [
+                    InkWell(
+                      child: Text('Login'),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/loginPage');
+                      },
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
+                      child: Text('Sign In'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignInPage()),
+                        );
+                      },
+                    ),
+                    SizedBox(
+                      width: 20,
+                    )
+                  ],
                 ),
-                SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  child: Text('Sign In'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignInPage()),
-                    );
-                  },
-                ),
-                SizedBox(
-                  width: 20,
-                )
-              ],
-            ),
-          ]),
+              ]),
           body: SafeArea(
             child: Container(
               ///gradientul de sus
@@ -237,12 +228,7 @@ class _FirstPageState extends State<FirstPage> {
                                       borderRadius: BorderRadius.circular(50)),
                                 ),
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const LoginPage()),
-                                  );
+                                  Navigator.pushNamed(context, '/loginPage');
                                 },
                               ),
                               SizedBox(
@@ -266,12 +252,7 @@ class _FirstPageState extends State<FirstPage> {
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 20, horizontal: 85)),
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SignInPage()),
-                                  );
+                                  Navigator.pushNamed(context, '/signinPage');
                                 },
                               ),
                             ],
@@ -284,38 +265,33 @@ class _FirstPageState extends State<FirstPage> {
           )),
       tablet: Scaffold(
           backgroundColor: const Color(0xFF000534),
-          appBar: AppBar(backgroundColor: Color(0xFF000534), actions: [
-            Row(
-              children: [
-                InkWell(
-                  child: Text('Login'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()),
-                    );
-                  },
+          appBar: AppBar(
+              automaticallyImplyLeading: false,
+              backgroundColor: Color(0xFF000534),
+              actions: [
+                Row(
+                  children: [
+                    InkWell(
+                      child: Text('Login'),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/loginPage');
+                      },
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    InkWell(
+                      child: Text('Sign In'),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/signinPage');
+                      },
+                    ),
+                    SizedBox(
+                      width: 20,
+                    )
+                  ],
                 ),
-                SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  child: Text('Sign In'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignInPage()),
-                    );
-                  },
-                ),
-                SizedBox(
-                  width: 20,
-                )
-              ],
-            ),
-          ]),
+              ]),
           body: SafeArea(
             child: Container(
               ///gradientul de sus
@@ -386,12 +362,7 @@ class _FirstPageState extends State<FirstPage> {
                                       borderRadius: BorderRadius.circular(50)),
                                 ),
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const LoginPage()),
-                                  );
+                                  Navigator.pushNamed(context, '/loginPage');
                                 },
                               ),
                               SizedBox(
@@ -415,12 +386,7 @@ class _FirstPageState extends State<FirstPage> {
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 20, horizontal: 85)),
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SignInPage()),
-                                  );
+                                  Navigator.pushNamed(context, '/signinPage');
                                 },
                               ),
                             ],
