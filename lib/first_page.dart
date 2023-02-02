@@ -136,47 +136,38 @@ class _FirstPageState extends State<FirstPage> {
           )),
       desktop: Scaffold(
           backgroundColor: const Color(0xFF000534),
-          appBar: AppBar(
-              leading: IconButton(
-                icon: Icon(
-                  Icons.arrow_back,
-                  color: Colors.white.withOpacity(0),
+          appBar: AppBar(backgroundColor: Color(0xFF000534), actions: [
+            Row(
+              children: [
+                InkWell(
+                  child: Text('Login'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()),
+                    );
+                  },
                 ),
-                onPressed: () {},
-              ),
-              backgroundColor: Color(0xFF000534),
-              actions: [
-                Row(
-                  children: [
-                    InkWell(
-                      child: Text('Login'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginPage()),
-                        );
-                      },
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    InkWell(
-                      child: Text('Sign In'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignInPage()),
-                        );
-                      },
-                    ),
-                    SizedBox(
-                      width: 20,
-                    )
-                  ],
+                SizedBox(
+                  width: 20,
                 ),
-              ]),
+                InkWell(
+                  child: Text('Sign In'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignInPage()),
+                    );
+                  },
+                ),
+                SizedBox(
+                  width: 20,
+                )
+              ],
+            ),
+          ]),
           body: SafeArea(
             child: Container(
               ///gradientul de sus
@@ -291,7 +282,155 @@ class _FirstPageState extends State<FirstPage> {
               ),
             ),
           )),
-      tablet: Container(color: Colors.black),
+      tablet: Scaffold(
+          backgroundColor: const Color(0xFF000534),
+          appBar: AppBar(backgroundColor: Color(0xFF000534), actions: [
+            Row(
+              children: [
+                InkWell(
+                  child: Text('Login'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()),
+                    );
+                  },
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                InkWell(
+                  child: Text('Sign In'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignInPage()),
+                    );
+                  },
+                ),
+                SizedBox(
+                  width: 20,
+                )
+              ],
+            ),
+          ]),
+          body: SafeArea(
+            child: Container(
+              ///gradientul de sus
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                  center: Alignment.centerLeft,
+                  colors: [
+                    Color.fromRGBO(50, 15, 98, 0.8),
+                    Color(0xFF000534),
+                  ],
+                  stops: [
+                    0.5,
+                    1,
+                  ],
+                ),
+              ),
+
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ///Logo
+                    Image.asset(
+                      'assets/images/LogoMarit.png',
+                    ),
+                    SizedBox(
+                      width: 150,
+                    ),
+
+                    ///Text "Service Finder"
+                    Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("Service Finder",
+                              style: GoogleFonts.outfit(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 32,
+                              )),
+                          Container(
+                            width: 500,
+                            child: Text(
+                              "    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ElevatedButton(
+                                child: Text('Login',
+                                    style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 26,
+                                    )),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color(0xFF310F62),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 85, vertical: 20),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(50)),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LoginPage()),
+                                  );
+                                },
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              ElevatedButton(
+                                child: Text('Sign In',
+                                    style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 26,
+                                    )),
+                                style: ElevatedButton.styleFrom(
+                                    side: const BorderSide(
+                                        width: 4,
+                                        color: Color.fromRGBO(55, 22, 113, 1)),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
+                                    backgroundColor: Color(0xFF000534),
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 20, horizontal: 85)),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SignInPage()),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ]),
+                  ],
+                ),
+              ),
+            ),
+          )),
     );
   }
 }
