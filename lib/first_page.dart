@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:servicefinder/login_page.dart';
 import 'package:servicefinder/responsive.dart';
-import 'package:servicefinder/signin_page.dart';
+import 'package:servicefinder/signin_page_user.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -78,9 +79,7 @@ class _FirstPageState extends State<FirstPage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                       ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/loginPage');
-                      },
+                      onPressed: (() => context.go('/loginPage')),
                     ),
 
                     ///Spatiu dintre buton login si "Don't have an account?"
@@ -118,7 +117,7 @@ class _FirstPageState extends State<FirstPage> {
                           padding: const EdgeInsets.symmetric(
                               vertical: 20, horizontal: 85)),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/signinPage');
+                        return context.go('/typeOfAccount');
                       },
                     ),
                   ],
@@ -135,24 +134,14 @@ class _FirstPageState extends State<FirstPage> {
                 Row(
                   children: [
                     InkWell(
-                      child: Text('Login'),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/loginPage');
-                      },
-                    ),
+                        child: Text('Login'),
+                        onTap: (() => context.go('/loginPage'))),
                     SizedBox(
                       width: 20,
                     ),
                     InkWell(
-                      child: Text('Sign In'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignInPage()),
-                        );
-                      },
-                    ),
+                        child: Text('Sign In'),
+                        onTap: (() => context.go('/typeOfAccount'))),
                     SizedBox(
                       width: 20,
                     )
@@ -227,9 +216,7 @@ class _FirstPageState extends State<FirstPage> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50)),
                                 ),
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/loginPage');
-                                },
+                                onPressed: () => context.go('/loginPage'),
                               ),
                               SizedBox(
                                 width: 30,
@@ -251,9 +238,7 @@ class _FirstPageState extends State<FirstPage> {
                                     backgroundColor: Color(0xFF000534),
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 20, horizontal: 85)),
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/signinPage');
-                                },
+                                onPressed: (() => context.go('/typeOfAccount')),
                               ),
                             ],
                           ),
@@ -273,18 +258,14 @@ class _FirstPageState extends State<FirstPage> {
                   children: [
                     InkWell(
                       child: Text('Login'),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/loginPage');
-                      },
+                      onTap: (() => context.go('/loginPage')),
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     InkWell(
                       child: Text('Sign In'),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/signinPage');
-                      },
+                      onTap: (() => context.go('/typeOfAccount')),
                     ),
                     SizedBox(
                       width: 20,
@@ -361,34 +342,31 @@ class _FirstPageState extends State<FirstPage> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50)),
                                 ),
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/loginPage');
-                                },
+                                onPressed: (() => context.go('/loginPage')),
                               ),
                               SizedBox(
                                 width: 30,
                               ),
                               ElevatedButton(
-                                child: Text('Sign In',
-                                    style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 26,
-                                    )),
-                                style: ElevatedButton.styleFrom(
-                                    side: const BorderSide(
-                                        width: 4,
-                                        color: Color.fromRGBO(55, 22, 113, 1)),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(50)),
-                                    backgroundColor: Color(0xFF000534),
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 20, horizontal: 85)),
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/signinPage');
-                                },
-                              ),
+                                  child: Text('Sign In',
+                                      style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 26,
+                                      )),
+                                  style: ElevatedButton.styleFrom(
+                                      side: const BorderSide(
+                                          width: 4,
+                                          color:
+                                              Color.fromRGBO(55, 22, 113, 1)),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(50)),
+                                      backgroundColor: Color(0xFF000534),
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 20, horizontal: 85)),
+                                  onPressed: (() =>
+                                      context.go('/typeOfAccount'))),
                             ],
                           ),
                         ]),
