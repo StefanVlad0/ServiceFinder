@@ -40,8 +40,10 @@ class _FirstPageState extends State<FirstPage> {
                 child: Column(
                   children: [
                     ///Spatiu liber pana la poza
-                    const SizedBox(
-                      height: 60,
+                    Expanded(
+                      child: const SizedBox(
+                        height: 50,
+                      ),
                     ),
 
                     ///Logo
@@ -59,8 +61,10 @@ class _FirstPageState extends State<FirstPage> {
                         )),
 
                     ///Spatiu dintre "Service Finder" si buton Login
-                    const SizedBox(
-                      height: 115,
+                    Expanded(
+                      child: const SizedBox(
+                        height: 50,
+                      ),
                     ),
 
                     ///Buton Login
@@ -119,6 +123,11 @@ class _FirstPageState extends State<FirstPage> {
                       onPressed: () {
                         return context.push('/typeOfAccount');
                       },
+                    ),
+                    Expanded(
+                      child: const SizedBox(
+                        height: 50,
+                      ),
                     ),
                   ],
                 ),

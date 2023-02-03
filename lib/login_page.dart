@@ -28,8 +28,10 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   ///Distanta dintre inceputul ecranului si Email address
-                  const SizedBox(
-                    height: 130,
+                  Expanded(
+                    child: const SizedBox(
+                      height: 130,
+                    ),
                   ),
 
                   ///Email adress
@@ -76,8 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   ///Distanta dintre Password si Login
-                  const SizedBox(
-                    height: 75,
+                  Expanded(
+                    child: const SizedBox(
+                      height: 75,
+                    ),
                   ),
 
                   ///Buton Login
@@ -121,14 +125,21 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   ///Distanta dintre Dont't have an account si Logo
-                  const SizedBox(
-                    height: 50,
+                  Expanded(
+                    child: const SizedBox(
+                      height: 50,
+                    ),
                   ),
 
                   ///Logo
                   Image.asset(
                     'assets/images/Logo (1).png',
                     scale: 1,
+                  ),
+                  Expanded(
+                    child: const SizedBox(
+                      height: 50,
+                    ),
                   ),
                 ],
               ),
