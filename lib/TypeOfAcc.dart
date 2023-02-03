@@ -195,44 +195,44 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          width: 200,
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(99, 26, 144, 0.5),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
                           child: Center(
-                            child: InkWell(
-                              child: Text(
-                                'Customer',
-                                style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 26,
-                                ),
+                            child: ElevatedButton(
+                              child: Text('Customer',
+                                  style: GoogleFonts.roboto(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 23,
+                                  )),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF310F62),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 50, vertical: 25),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50)),
                               ),
-                              onTap: (() => context.go('/signinPageUser')),
+                              onPressed: () => context.go('/signinPageUser'),
                             ),
                           ),
                         ),
                         Container(
-                          width: 200,
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(99, 26, 144, 0.5),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
                           child: Center(
-                            child: InkWell(
-                              child: Text(
-                                'Service',
-                                style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 26,
-                                ),
-                              ),
-                              onTap: () => context.go('/signinPageService'),
+                            child: ElevatedButton(
+                              child: Text('Service',
+                                  style: GoogleFonts.roboto(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 23,
+                                  )),
+                              style: ElevatedButton.styleFrom(
+                                  side: const BorderSide(
+                                      width: 4,
+                                      color: Color.fromRGBO(55, 22, 113, 1)),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(50)),
+                                  backgroundColor: Color(0xFF000534),
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 25, horizontal: 50)),
+                              onPressed: () => context.go('/signinPageService'),
                             ),
                           ),
                         ),
@@ -318,41 +318,44 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          width: 200,
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(99, 26, 144, 0.5),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
                           child: Center(
-                            child: Text(
-                              'Customer',
-                              style: GoogleFonts.roboto(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 26,
+                            child: ElevatedButton(
+                              child: Text('Customer',
+                                  style: GoogleFonts.roboto(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 23,
+                                  )),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF310F62),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 50, vertical: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50)),
                               ),
+                              onPressed: () => context.go('/signinPageUser'),
                             ),
                           ),
                         ),
                         Container(
-                          width: 200,
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            color: Color.fromRGBO(99, 26, 144, 0.5),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
                           child: Center(
-                            child: InkWell(
-                              child: Text(
-                                'Service',
-                                style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 26,
-                                ),
-                              ),
-                              onTap: () => context.go('/signinPageService'),
+                            child: ElevatedButton(
+                              child: Text('Service',
+                                  style: GoogleFonts.roboto(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 26,
+                                  )),
+                              style: ElevatedButton.styleFrom(
+                                  side: const BorderSide(
+                                      width: 4,
+                                      color: Color.fromRGBO(55, 22, 113, 1)),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(50)),
+                                  backgroundColor: Color(0xFF000534),
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 20, horizontal: 50)),
+                              onPressed: () => context.go('/signinPageService'),
                             ),
                           ),
                         ),
