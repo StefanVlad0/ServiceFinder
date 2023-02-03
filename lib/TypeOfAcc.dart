@@ -77,7 +77,7 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50)),
                             ),
-                            onPressed: (() => context.push('/loginPage')),
+                            onPressed: (() => context.push('/signinPageUser')),
                           ),
                           Spacer(
                             flex: 1,
@@ -95,7 +95,8 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50)),
                             ),
-                            onPressed: (() => context.push('/loginPage')),
+                            onPressed: (() =>
+                                context.push('/signinPageService')),
                           ),
                           Spacer(
                             flex: 2,
