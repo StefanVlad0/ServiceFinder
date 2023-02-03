@@ -25,116 +25,244 @@ class _SignInPageUserState extends State<SignInPageUser> {
             ),
             body: SafeArea(
               child: Center(
-                child: Column(
-                  children: [
-                    ///Distanta dintre inceputul ecranului si Email address
-                    const SizedBox(
-                      height: 150,
-                    ),
-
-                    ///Email adress
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: TextField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 2,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Email address',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      ///Distanta dintre inceputul ecranului si Email address
+                      const SizedBox(
+                        height: 50,
                       ),
-                    ),
 
-                    ///Password
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 3,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Password',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    ///Confirm password
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 3,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Confirm password',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    ///Distanta dintre Password si Sign In
-                    const SizedBox(
-                      height: 45,
-                    ),
-
-                    ///Buton Sign In
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Container(
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(99, 26, 144, 0.5),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Sign In',
-                            style: GoogleFonts.roboto(
+                      ///Email adress
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 2,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'First name',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 26,
                             ),
                           ),
                         ),
                       ),
-                    ),
+                      const SizedBox(
+                        height: 20,
+                      ),
 
-                    ///Spatiu dintre buton Sign In si logo
-                    const SizedBox(
-                      height: 90,
-                    ),
+                      ///Password
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Last name',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
 
-                    ///Logo
-                    Image.asset(
-                      'assets/images/Logo (1).png',
-                      scale: 1,
-                    ),
-                  ],
+                      ///Confirm password
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Email address',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Phone number',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Country',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'City',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Password',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Confirm password',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      ///Distanta dintre Password si Sign In
+                      const SizedBox(
+                        height: 45,
+                      ),
+
+                      ///Buton Sign In
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                        child: Container(
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(99, 26, 144, 0.5),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Sign In',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 26,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      ///Spatiu dintre buton Sign In si logo
+                      const SizedBox(
+                        height: 75,
+                      ),
+
+                      ///Logo
+                      Image.asset(
+                        'assets/images/Logo (1).png',
+                        scale: 1,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             )),
