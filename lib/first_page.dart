@@ -79,7 +79,7 @@ class _FirstPageState extends State<FirstPage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
                       ),
-                      onPressed: (() => context.go('/loginPage')),
+                      onPressed: (() => context.push('/loginPage')),
                     ),
 
                     ///Spatiu dintre buton login si "Don't have an account?"
@@ -117,7 +117,7 @@ class _FirstPageState extends State<FirstPage> {
                           padding: const EdgeInsets.symmetric(
                               vertical: 20, horizontal: 85)),
                       onPressed: () {
-                        return context.go('/typeOfAccount');
+                        return context.push('/typeOfAccount');
                       },
                     ),
                   ],
