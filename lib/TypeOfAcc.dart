@@ -202,13 +202,16 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: Center(
-                            child: Text(
-                              'Customer',
-                              style: GoogleFonts.roboto(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 26,
+                            child: InkWell(
+                              child: Text(
+                                'Customer',
+                                style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 26,
+                                ),
                               ),
+                              onTap: (() => context.go('/signinPageUser')),
                             ),
                           ),
                         ),

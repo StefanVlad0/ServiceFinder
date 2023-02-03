@@ -33,8 +33,8 @@ GoRouter router = GoRouter(
       builder: (context, state) => FirstPage(),
     ),
     GoRoute(
-      path: '/signinPage',
-      builder: (context, state) => SignInPage(),
+      path: '/signinPageUser',
+      builder: (context, state) => SignInPageUser(),
     ),
     GoRoute(
       path: '/loginPage',
