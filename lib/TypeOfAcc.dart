@@ -27,96 +27,82 @@ class _TypeOfAccState extends State<TypeOfAcc> {
           body: SafeArea(
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ///Distanta dintre inceputul ecranului si Email address
-                  const SizedBox(
-                    height: 130,
-                  ),
 
-                  ///Email adress
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50),
-                    child: TextField(
-                      style: TextStyle(color: Colors.white),
-                      decoration: InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
-                          //<-- SEE HERE
-                          borderSide: BorderSide(
-                              width: 2,
-                              color: Color.fromRGBO(255, 255, 255, 0.4)),
-                        ),
-                        hintText: 'Email address modified',
-                        hintStyle: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 0.4),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  ///Password
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50),
-                    child: TextField(
-                      obscureText: true,
-                      style: TextStyle(color: Colors.white),
-                      decoration: InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
-                          //<-- SEE HERE
-                          borderSide: BorderSide(
-                              width: 3,
-                              color: Color.fromRGBO(255, 255, 255, 0.4)),
-                        ),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 0.4),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  ///Distanta dintre Password si Login
-                  const SizedBox(
-                    height: 75,
-                  ),
-
-                  ///Buton Login
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 50),
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      height: 400,
+                      //padding:
+                      //  EdgeInsets.symmetric(vertical: 150, horizontal: 25),
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(99, 26, 144, 0.5),
+                        color: Color.fromRGBO(0, 7, 72, 1),
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      child: Center(
-                        child: Text(
-                          'Sign in',
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 26,
+
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Spacer(
+                            flex: 2,
                           ),
-                        ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Text(
+                              'What type of account do you want to create?',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 26,
+                                letterSpacing: 0.5,
+                              ),
+                            ),
+                          ),
+                          Spacer(
+                            flex: 3,
+                          ),
+                          ElevatedButton(
+                            child: Text('Customer',
+                                style: GoogleFonts.roboto(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                )),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromRGBO(101, 36, 163, 1),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 50, vertical: 15),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50)),
+                            ),
+                            onPressed: (() => context.push('/loginPage')),
+                          ),
+                          Spacer(
+                            flex: 1,
+                          ),
+                          ElevatedButton(
+                            child: Text('Service',
+                                style: GoogleFonts.roboto(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                )),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromRGBO(101, 36, 163, 1),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 60, vertical: 15),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50)),
+                            ),
+                            onPressed: (() => context.push('/loginPage')),
+                          ),
+                          Spacer(
+                            flex: 2,
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-
-                  ///Spatiu dintre buton login si "Don't have an account?"
-                  const SizedBox(
-                    height: 60,
-                  ),
-
-                  ///Distanta dintre Dont't have an account si Logo
-                  const SizedBox(
-                    height: 50,
-                  ),
-
-                  ///Logo
-                  Image.asset(
-                    'assets/images/Logo (1).png',
-                    scale: 1,
                   ),
                 ],
               ),
