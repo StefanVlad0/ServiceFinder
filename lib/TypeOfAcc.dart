@@ -178,26 +178,11 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                       width: 500,
                       child: Text(
                         'What type of account do you want to create?',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    Container(
-                      width: 500,
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 3,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Password',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 32,
                         ),
                       ),
                     ),
@@ -205,30 +190,47 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                       height: 50,
                     ),
 
-                    ///Buton Sign In
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Container(
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(99, 26, 144, 0.5),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Sign in',
-                            style: GoogleFonts.roboto(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 26,
+                    //rand cu buton customer si service
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: 200,
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(99, 26, 144, 0.5),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Customer',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 26,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-
-                    SizedBox(
-                      height: 20,
+                        Container(
+                          width: 200,
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(99, 26, 144, 0.5),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Service',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 26,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -291,68 +293,61 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                   children: [
                     Container(
                       width: 500,
-                      child: TextField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 2,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Email address modified',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 500,
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 3,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Password',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
+                      child: Text(
+                        'What type of account do you want to create?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 32,
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 50,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Container(
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(99, 26, 144, 0.5),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Sign In',
-                            style: GoogleFonts.roboto(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 26,
+
+                    //rand cu buton customer si service
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: 200,
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(99, 26, 144, 0.5),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Customer',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 26,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
+                        Container(
+                          width: 200,
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(99, 26, 144, 0.5),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Service',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 26,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
