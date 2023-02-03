@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:go_router/go_router.dart';
 import 'package:servicefinder/TypeOfAcc.dart';
 import 'package:servicefinder/login_page.dart';
+import 'package:servicefinder/signin_page_service.dart';
 import 'package:servicefinder/signin_page_user.dart';
 import 'first_page.dart';
 
@@ -43,6 +44,10 @@ GoRouter router = GoRouter(
     GoRoute(
       path: '/typeOfAccount',
       builder: (context, state) => TypeOfAcc(),
+    ),
+    GoRoute(
+      path: '/signinPageService',
+      builder: (context, state) => SignInPageService(),
     ),
   ],
 );
