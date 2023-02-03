@@ -4,14 +4,14 @@ import 'package:servicefinder/responsive.dart';
 import 'package:go_router/go_router.dart';
 import 'login_page.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({super.key});
+class SignInPageUser extends StatefulWidget {
+  const SignInPageUser({super.key});
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<SignInPageUser> createState() => _SignInPageUserState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignInPageUserState extends State<SignInPageUser> {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
