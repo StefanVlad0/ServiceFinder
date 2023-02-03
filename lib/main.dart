@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router/go_router.dart';
 import 'package:servicefinder/TypeOfAcc.dart';
+import 'package:servicefinder/UserAccountPage.dart';
 import 'package:servicefinder/login_page.dart';
 import 'package:servicefinder/signin_page_service.dart';
 import 'package:servicefinder/signin_page_user.dart';
@@ -27,7 +28,7 @@ GoRouter router = GoRouter(
   routes: [
     GoRoute(
       path: '/', //asta e initial page
-      builder: (context, state) => FirstPage(),
+      builder: (context, state) => UserAccounPage(),
     ),
     GoRoute(
       path: '/firstPage',
