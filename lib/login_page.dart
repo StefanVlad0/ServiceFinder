@@ -117,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                           letterSpacing: 1,
                           decoration: TextDecoration.underline,
                         )),
-                    onTap: () => context.go('/typeOfAccount'),
+                    onTap: () => context.push('/typeOfAccount'),
                   ),
 
                   ///Distanta dintre Dont't have an account si Logo
