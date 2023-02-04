@@ -723,7 +723,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                                           50)),
                                             ),
                                             onPressed: (() =>
-                                                context.push('/userAccount')),
+                                                context.go('/userAccount')),
                                           ),
                                         ),
                                       ),

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -108,11 +110,106 @@ class _UserAccounPageState extends State<UserAccounPage> {
                 flex: 7,
                 child: Container(
                   color: Color(0xFF000000),
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(children: [
-                      Image.asset('assets/images/UsersPhotosDesktop.png')
-                    ]),
+                  child: Row(
+                    children: [
+                      Spacer(
+                        flex: 2,
+                      ),
+                      Expanded(
+                          flex: 5,
+                          child: Container(
+                              child: Column(
+                            children: [
+                              Image.asset(
+                                  'assets/images/UsersPhotosDesktop.png'),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Nume Prenume',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        Text(
+                                          'user',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        Text(
+                                          'Reviews: 12 • ServiceFinder age: 1y 4m ',
+                                          style: TextStyle(
+                                              color: Colors.purple,
+                                              fontWeight: FontWeight.bold),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        ElevatedButton(
+                                          child: Text('Settings',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.roboto(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 24,
+                                              )),
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Color(0xFF310F62),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 50, vertical: 20),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                          ),
+                                          onPressed: (() =>
+                                              context.go('/userAccount')),
+                                        ),
+                                        ElevatedButton(
+                                          child: Text('Share',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.roboto(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 24,
+                                              )),
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Color(0xFF310F62),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 50, vertical: 20),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                          ),
+                                          onPressed: (() =>
+                                              context.go('/userAccount')),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      'reviews',
+                                      style: TextStyle(color: Colors.white),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ))),
+                      Spacer(
+                        flex: 2,
+                      )
+                    ],
                   ),
                 ),
               ),
