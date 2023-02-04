@@ -211,6 +211,9 @@ class _UserAccounPageState extends State<UserAccounPage> {
                           child: Container(
                               child: Column(
                             children: [
+                              SizedBox(
+                                height: 30,
+                              ),
                               Image.asset(
                                   'assets/images/UsersPhotosDesktop.png'),
                               Padding(
@@ -282,8 +285,8 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                   ],
                                 ),
                               ),
-                              Spacer(
-                                flex: 1,
+                              SizedBox(
+                                height: 20,
                               ),
                               Align(
                                   alignment: Alignment.center,
@@ -294,6 +297,81 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                           color: Colors.white, fontSize: 20),
                                     ),
                                   )),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(27, 26, 26, 1),
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Total Reviews:23',
+                                          style: TextStyle(
+                                            color:
+                                                Colors.white.withOpacity(0.6),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Divider(
+                                          color: Colors.white.withOpacity(0.5),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/service.png',
+                                              scale: 3,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  child: Text('Service SRL',
+                                                      style: TextStyle(
+                                                          color: Colors.white)),
+                                                ),
+                                                Text(
+                                                  '3.55',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                )
+                                              ],
+                                            ),
+                                            Spacer(
+                                              flex: 1,
+                                            ),
+                                            Expanded(
+                                              flex: 5,
+                                              child: Container(
+                                                child: Text(
+                                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ]),
+                                ),
+                              ),
                             ],
                           ))),
                       Spacer(
