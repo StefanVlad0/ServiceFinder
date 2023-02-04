@@ -28,7 +28,7 @@ GoRouter router = GoRouter(
   routes: [
     GoRoute(
       path: '/', //asta e initial page
-      builder: (context, state) => FirstPage(),
+      builder: (context, state) => UserAccounPage(),
     ),
     GoRoute(
       path: '/firstPage',

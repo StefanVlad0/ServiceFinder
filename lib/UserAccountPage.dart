@@ -19,10 +19,10 @@ class _UserAccounPageState extends State<UserAccounPage> {
         ),
         tablet: Container(color: Colors.red),
         desktop: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: const Color(0xFF1B1A1A),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color(0xFF1B1A1A),
               actions: [
                 Row(
                   children: [
@@ -43,20 +43,23 @@ class _UserAccounPageState extends State<UserAccounPage> {
               ]),
           body: Row(
             children: [
-              Expanded(
-                flex: 5,
-                child: Container(
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(
-                width: 10,
+              Spacer(
+                flex: 1,
               ),
               Expanded(
-                flex: 2,
+                flex: 7,
                 child: Container(
-                  color: Colors.white,
+                  color: Color(0xFF000000),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(children: [
+                      Image.asset('assets/images/UsersPhotosDesktop.png')
+                    ]),
+                  ),
                 ),
+              ),
+              Spacer(
+                flex: 1,
               )
             ],
           ),
