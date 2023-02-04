@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:servicefinder/responsive.dart';
@@ -16,7 +17,7 @@ class _UserAccounPageState extends State<UserAccounPage> {
     return Responsive(
         mobile: Scaffold(
             resizeToAvoidBottomInset: false,
-            backgroundColor: Color.fromARGB(255, 240, 142, 142),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             appBar: AppBar(
               backgroundColor: Color.fromARGB(255, 0, 0, 0),
               elevation: 0,
@@ -30,7 +31,7 @@ class _UserAccounPageState extends State<UserAccounPage> {
                       children: <Widget>[
                         Container(
                           //width: MediaQuery.of(context).size.width,
-                          height: 100,
+                          height: 115,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage("assets/images/Mask group.png"),
@@ -39,36 +40,126 @@ class _UserAccounPageState extends State<UserAccounPage> {
                           ),
                         ),
                         Container(
-                          height: 300,
-                          color: Colors.white,
+                          height: 175,
+                          color: Colors.black,
                           child: Center(
-                            child: Text('Content goes here'),
+                            child: Column(
+                              children: [
+                                Spacer(flex: 3),
+                                Text('Nume Prenume',
+                                    style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 26,
+                                    )),
+                                Spacer(flex: 1),
+                                Text('Reviews: 12 • ServiceFinder age: 1y 4m',
+                                    style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(71, 75, 132, 1),
+                                      fontSize: 14,
+                                    )),
+                                Spacer(flex: 2),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
-                          height: 300,
-                          color: Colors.white,
-                          child: Center(
-                            child: Text('Content goes here'),
+                          height: 70,
+                          width: double.infinity,
+                          color: Colors.black,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Text("Reviews:",
+                                style: GoogleFonts.outfit(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                )),
                           ),
                         ),
-                        Container(
-                          height: 300,
-                          color: Colors.white,
-                          child: Center(
-                            child: Text('Content goes here'),
-                          ),
-                        ),
+                        Column(
+                          children: [
+                            Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 65),
+                                child: Container(
+                                  padding: EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(27, 26, 26, 1),
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                  child: Center(
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/service.png',
+                                              height: 45,
+                                              width: 45,
+                                            ),
+                                            SizedBox(
+                                              width: 25,
+                                            ),
+                                            Flexible(
+                                              fit: FlexFit.loose,
+                                              child: Text(
+                                                "Autocenter Srl",
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.outfit(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                ),
+                                                softWrap: true,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        RatingBar.builder(
+                                            initialRating: 3,
+                                            ignoreGestures: true,
+                                            minRating: 1,
+                                            direction: Axis.horizontal,
+                                            allowHalfRating: true,
+                                            itemCount: 5,
+                                            itemSize: 30,
+                                            itemPadding:
+                                                const EdgeInsets.symmetric(
+                                              horizontal: 1,
+                                            ),
+                                            itemBuilder: (context, _) =>
+                                                const Icon(
+                                                  Icons.star,
+                                                  color: Color.fromRGBO(
+                                                      221, 182, 95, 1),
+                                                ),
+                                            onRatingUpdate: (rating) {
+                                              print(rating);
+                                            })
+                                      ],
+                                    ),
+                                  ),
+                                )),
+                          ],
+                        )
                       ],
                     ),
                     Positioned(
                       top:
-                          50.0, // (background container size) - (circle height / 2)
+                          60.0, // (background container size) - (circle height / 2)
                       child: Container(
-                        height: 100.0,
-                        width: 100.0,
+                        height: 115.0,
+                        width: 115.0,
                         decoration: BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.green),
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/snoo2.jpg"),
+                              fit: BoxFit.cover),
+                        ),
                       ),
                     )
                   ],
