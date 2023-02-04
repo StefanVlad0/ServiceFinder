@@ -27,11 +27,7 @@ class MyApp extends StatelessWidget {
 GoRouter router = GoRouter(
   routes: [
     GoRoute(
-      path: '/', //asta e initial page
-      builder: (context, state) => UserAccounPage(),
-    ),
-    GoRoute(
-      path: '/firstPage',
+      path: '/',
       builder: (context, state) => FirstPage(),
     ),
     GoRoute(
@@ -49,6 +45,10 @@ GoRouter router = GoRouter(
     GoRoute(
       path: '/signinPageService',
       builder: (context, state) => SignInPageService(),
+    ),
+    GoRoute(
+      path: '/userAccount', //asta e initial page
+      builder: (context, state) => UserAccounPage(),
     ),
   ],
 );

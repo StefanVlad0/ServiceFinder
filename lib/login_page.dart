@@ -85,25 +85,21 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   ///Buton Login
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50),
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(99, 26, 144, 0.5),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Login',
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 26,
-                          ),
-                        ),
-                      ),
+                  ElevatedButton(
+                    child: Text('Login',
+                        style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 26,
+                        )),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF310F62),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 85, vertical: 20),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
                     ),
+                    onPressed: (() => context.push('/userAccount')),
                   ),
 
                   ///Spatiu dintre buton login si "Don't have an account?"

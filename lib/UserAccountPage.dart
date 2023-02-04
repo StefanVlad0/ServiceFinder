@@ -14,8 +14,13 @@ class _UserAccounPageState extends State<UserAccounPage> {
   @override
   Widget build(BuildContext context) {
     return Responsive(
-        mobile: Container(
-          color: Colors.black,
+        mobile: Scaffold(
+          resizeToAvoidBottomInset: false,
+          backgroundColor: const Color(0xFF000534),
+          appBar: AppBar(
+            backgroundColor: Color(0xFF000534),
+            elevation: 0,
+          ),
         ),
         tablet: Container(color: Colors.red),
         desktop: Scaffold(
