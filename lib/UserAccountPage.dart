@@ -154,14 +154,13 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                           child: Text('Settings',
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.roboto(
-                                                fontWeight: FontWeight.bold,
                                                 color: Colors.white,
-                                                fontSize: 24,
+                                                fontSize: 15,
                                               )),
                                           style: ElevatedButton.styleFrom(
-                                            backgroundColor: Color(0xFF310F62),
+                                            backgroundColor: Color(0xFF1B1A1A),
                                             padding: const EdgeInsets.symmetric(
-                                                horizontal: 50, vertical: 20),
+                                                horizontal: 30, vertical: 20),
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(50)),
@@ -173,14 +172,13 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                           child: Text('Share',
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.roboto(
-                                                fontWeight: FontWeight.bold,
                                                 color: Colors.white,
-                                                fontSize: 24,
+                                                fontSize: 15,
                                               )),
                                           style: ElevatedButton.styleFrom(
-                                            backgroundColor: Color(0xFF310F62),
+                                            backgroundColor: Color(0xFF1B1A1A),
                                             padding: const EdgeInsets.symmetric(
-                                                horizontal: 50, vertical: 20),
+                                                horizontal: 30, vertical: 20),
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(50)),
@@ -193,17 +191,18 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                   ],
                                 ),
                               ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(
-                                      'reviews',
-                                      style: TextStyle(color: Colors.white),
-                                    )
-                                  ],
-                                ),
-                              )
+                              Spacer(
+                                flex: 1,
+                              ),
+                              Align(
+                                  alignment: Alignment.center,
+                                  child: Container(
+                                    child: Text(
+                                      'Reviews',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20),
+                                    ),
+                                  )),
                             ],
                           ))),
                       Spacer(
