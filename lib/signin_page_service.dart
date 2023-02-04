@@ -724,7 +724,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                           50)),
                                             ),
                                             onPressed: (() =>
-                                                context.push('/userAccount')),
+                                                context.go('/userAccount')),
                                           ),
                                         ),
                                       ),
