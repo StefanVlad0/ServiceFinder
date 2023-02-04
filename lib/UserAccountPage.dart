@@ -15,13 +15,66 @@ class _UserAccounPageState extends State<UserAccounPage> {
   Widget build(BuildContext context) {
     return Responsive(
         mobile: Scaffold(
-          resizeToAvoidBottomInset: false,
-          backgroundColor: const Color(0xFF000534),
-          appBar: AppBar(
-            backgroundColor: Color(0xFF000534),
-            elevation: 0,
-          ),
-        ),
+            resizeToAvoidBottomInset: false,
+            backgroundColor: Color.fromARGB(255, 240, 142, 142),
+            appBar: AppBar(
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              elevation: 0,
+            ),
+            body: SafeArea(
+              child: SingleChildScrollView(
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Container(
+                          //width: MediaQuery.of(context).size.width,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/Mask group.png"),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 300,
+                          color: Colors.white,
+                          child: Center(
+                            child: Text('Content goes here'),
+                          ),
+                        ),
+                        Container(
+                          height: 300,
+                          color: Colors.white,
+                          child: Center(
+                            child: Text('Content goes here'),
+                          ),
+                        ),
+                        Container(
+                          height: 300,
+                          color: Colors.white,
+                          child: Center(
+                            child: Text('Content goes here'),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Positioned(
+                      top:
+                          50.0, // (background container size) - (circle height / 2)
+                      child: Container(
+                        height: 100.0,
+                        width: 100.0,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.green),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )),
         tablet: Container(color: Colors.red),
         desktop: Scaffold(
           backgroundColor: const Color(0xFF1B1A1A),
