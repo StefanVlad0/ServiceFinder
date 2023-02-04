@@ -313,219 +313,229 @@ class _SignInPageServiceState extends State<SignInPageService> {
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: Row(
-                          // mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                        child: Column(
                           children: [
-                            Expanded(
-                              flex: 2,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
+                            Row(
+                              // mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Service Name',
+                                            hintStyle: TextStyle(
                                               color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Service Name',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Email address',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Password',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Confirm password',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 50),
-                                    child: Container(
-                                      width: 200,
-                                      padding: EdgeInsets.all(15),
-                                      decoration: BoxDecoration(
-                                        color: Color.fromRGBO(99, 26, 144, 0.5),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Sign In',
-                                          style: GoogleFonts.roboto(
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                            fontSize: 26,
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Email address',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Password',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Confirm password',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                                SizedBox(
+                                  width: 60,
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Full Address',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Phone number',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'Contry',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        //width: 400,
+                                        child: TextField(
+                                          style: TextStyle(color: Colors.white),
+                                          decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              //<-- SEE HERE
+                                              borderSide: BorderSide(
+                                                  width: 2,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.4)),
+                                            ),
+                                            hintText: 'City',
+                                            hintStyle: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.4),
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                            SizedBox(
-                              width: 60,
-                            ),
-                            Expanded(
-                              flex: 2,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Full Address',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
+                            //button for sign in / entering account
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: Container(
+                                child: Center(
+                                  child: ElevatedButton(
+                                    child: Text('Sign In',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
+                                          color: Colors.white,
+                                          fontSize: 24,
+                                        )),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Color(0xFF310F62),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 50, vertical: 20),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(50)),
                                     ),
+                                    onPressed: (() =>
+                                        context.go('/userAccount')),
                                   ),
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Phone number',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'Contry',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    //width: 400,
-                                    child: TextField(
-                                      style: TextStyle(color: Colors.white),
-                                      decoration: InputDecoration(
-                                        enabledBorder: UnderlineInputBorder(
-                                          //<-- SEE HERE
-                                          borderSide: BorderSide(
-                                              width: 2,
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4)),
-                                        ),
-                                        hintText: 'City',
-                                        hintStyle: TextStyle(
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.4),
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
                           ],
@@ -692,22 +702,29 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 50),
                                       child: Container(
-                                        width: 200,
-                                        padding: EdgeInsets.all(15),
-                                        decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(99, 26, 144, 0.5),
-                                          borderRadius:
-                                              BorderRadius.circular(50),
-                                        ),
                                         child: Center(
-                                          child: Text(
-                                            'Sign In',
-                                            style: GoogleFonts.roboto(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                              fontSize: 26,
+                                          child: ElevatedButton(
+                                            child: Text('Sign In',
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.roboto(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                  fontSize: 24,
+                                                )),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  Color(0xFF310F62),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 50,
+                                                      vertical: 20),
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          50)),
                                             ),
+                                            onPressed: (() =>
+                                                context.push('/userAccount')),
                                           ),
                                         ),
                                       ),
