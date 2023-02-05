@@ -298,7 +298,7 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                     ),
                                   )),
                               SizedBox(
-                                height: 10,
+                                height: 15,
                               ),
                               Container(
                                 decoration: BoxDecoration(
@@ -330,6 +330,93 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                           height: 15,
                                         ),
                                         Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/service.png',
+                                              scale: 3,
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  child: Text('Service SRL',
+                                                      style: TextStyle(
+                                                          color: Colors.white)),
+                                                ),
+                                                Text(
+                                                  '3.55',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                )
+                                              ],
+                                            ),
+                                            Spacer(),
+                                            Expanded(
+                                              flex: 5,
+                                              child: Container(
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    RatingBar.builder(
+                                                        initialRating: 3,
+                                                        ignoreGestures: true,
+                                                        minRating: 1,
+                                                        direction:
+                                                            Axis.horizontal,
+                                                        allowHalfRating: true,
+                                                        itemCount: 5,
+                                                        itemSize: 30,
+                                                        itemPadding:
+                                                            const EdgeInsets
+                                                                .symmetric(
+                                                          horizontal: 1,
+                                                        ),
+                                                        itemBuilder:
+                                                            (context, _) =>
+                                                                const Icon(
+                                                                  Icons.star,
+                                                                  color: Color
+                                                                      .fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                ),
+                                                        onRatingUpdate:
+                                                            (rating) {
+                                                          print(rating);
+                                                        }),
+                                                    Text(
+                                                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 18),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Divider(
+                                          color: Colors.white.withOpacity(0.5),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Image.asset(
                                               'assets/images/service.png',
@@ -360,14 +447,60 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                             Expanded(
                                               flex: 5,
                                               child: Container(
-                                                child: Text(
-                                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
-                                                  style: TextStyle(
-                                                      color: Colors.white),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    RatingBar.builder(
+                                                        initialRating: 3,
+                                                        ignoreGestures: true,
+                                                        minRating: 1,
+                                                        direction:
+                                                            Axis.horizontal,
+                                                        allowHalfRating: true,
+                                                        itemCount: 5,
+                                                        itemSize: 30,
+                                                        itemPadding:
+                                                            const EdgeInsets
+                                                                .symmetric(
+                                                          horizontal: 1,
+                                                        ),
+                                                        itemBuilder:
+                                                            (context, _) =>
+                                                                const Icon(
+                                                                  Icons.star,
+                                                                  color: Color
+                                                                      .fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                ),
+                                                        onRatingUpdate:
+                                                            (rating) {
+                                                          print(rating);
+                                                        }),
+                                                    Text(
+                                                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 18),
+                                                    ),
+                                                  ],
                                                 ),
                                               ),
                                             )
                                           ],
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Center(
+                                          child: Text(
+                                            'See more...',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
                                         )
                                       ]),
                                 ),
