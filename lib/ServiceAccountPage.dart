@@ -13,279 +13,173 @@ class ServiceAccountPage extends StatefulWidget {
   State<ServiceAccountPage> createState() => _ServiceAccountPageState();
 }
 
-class _ServiceAccountPageState extends State<ServiceAccountPage> {
+class _ServiceAccountPageState extends State<ServiceAccountPage>
+    with SingleTickerProviderStateMixin {
+  final bodyGlobalKey = GlobalKey();
+  final List<Widget> myTabs = [
+    Tab(text: 'Service Info'),
+    Tab(text: 'Reviews'),
+    //Tab(text: 'fixed'),
+  ];
+  late TabController _tabController;
+  late ScrollController _scrollController;
+  late bool fixedScroll;
+
+  Widget _buildCarousel() {
+    return Stack(
+      alignment: Alignment.center,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            Container(
+              //width: MediaQuery.of(context).size.width,
+              height: 115,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/Mask group.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Container(
+              height: 175,
+              color: Colors.black,
+              child: Center(
+                child: Column(
+                  children: [
+                    Spacer(flex: 3),
+                    Text('Service SRL',
+                        style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 26,
+                        )),
+                    Spacer(flex: 1),
+                    Text('Reviews: 12 • ServiceFinder age: 1y 4m',
+                        style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromRGBO(71, 75, 132, 1),
+                          fontSize: 14,
+                        )),
+                    Spacer(flex: 2),
+                  ],
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Image.asset('assets/images/sharethis-128.png'),
+                  iconSize: 10,
+                  onPressed: () {},
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                IconButton(
+                  icon: Image.asset('assets/images/flag-128.png'),
+                  iconSize: 10,
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ],
+        ),
+        Positioned(
+          top: 60.0, // (background container size) - (circle height / 2)
+          child: Container(
+            height: 115.0,
+            width: 115.0,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                  image: AssetImage("assets/images/service.png"),
+                  fit: BoxFit.cover),
+            ),
+          ),
+        )
+      ],
+    );
+  }
+
+  @override
+  void initState() {
+    _scrollController = ScrollController();
+    _scrollController.addListener(_scrollListener);
+    _tabController = TabController(length: 2, vsync: this);
+    _tabController.addListener(_smoothScrollToTop);
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  _scrollListener() {
+    if (fixedScroll) {
+      _scrollController.jumpTo(0);
+    }
+  }
+
+  _smoothScrollToTop() {
+    setState(() {
+      fixedScroll = _tabController.index == 0;
+    });
+  }
+
+  _buildTabContext(int lineCount) => Container(
+        child: ListView.builder(
+          physics: const ClampingScrollPhysics(),
+          itemCount: lineCount,
+          itemBuilder: (BuildContext context, int index) {
+            return Text('some content', style: TextStyle(color: Colors.white));
+          },
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     return Responsive(
-        mobile: DefaultTabController(
-          length: 2,
-          child: Scaffold(
-              resizeToAvoidBottomInset: false,
-              backgroundColor: Color.fromARGB(255, 0, 0, 0),
-              appBar: AppBar(
-                backgroundColor: Color.fromARGB(255, 0, 0, 0),
-                elevation: 0,
-              ),
-              body: SafeArea(
-                child: SingleChildScrollView(
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Container(
-                            //width: MediaQuery.of(context).size.width,
-                            height: 115,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image:
-                                    AssetImage("assets/images/Mask group.png"),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 175,
-                            color: Colors.black,
-                            child: Center(
-                              child: Column(
-                                children: [
-                                  Spacer(flex: 3),
-                                  Text('Service SRL',
-                                      style: GoogleFonts.roboto(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 26,
-                                      )),
-                                  Spacer(flex: 1),
-                                  Text('Reviews: 12 • ServiceFinder age: 1y 4m',
-                                      style: GoogleFonts.roboto(
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(71, 75, 132, 1),
-                                        fontSize: 14,
-                                      )),
-                                  Spacer(flex: 2),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                icon: Image.asset(
-                                    'assets/images/sharethis-128.png'),
-                                iconSize: 10,
-                                onPressed: () {},
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              IconButton(
-                                icon: Image.asset('assets/images/flag-128.png'),
-                                iconSize: 10,
-                                onPressed: () {},
-                              ),
-                            ],
-                          ),
-                          TabBar(
-                            tabs: [
-                              Tab(text: 'Service Info'),
-                              Tab(text: 'Reviews'),
-                            ],
-                            isScrollable: true,
-                          ),
-                          SizedBox(
-                              height: 3000,
-                              child: TabBarView(
-                                children: [
-                                  Column(children: [
-                                    Container(
-                                      height: 70,
-                                      width: double.infinity,
-                                      color: Colors.black,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(15),
-                                        child: Text("Reviews:",
-                                            style: GoogleFonts.outfit(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                              fontSize: 24,
-                                            )),
-                                      ),
-                                    ),
-
-                                    /// Review
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 25),
-                                      child: Column(
-                                        children: [
-                                          Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 65),
-                                              child: Container(
-                                                padding: EdgeInsets.all(15),
-                                                decoration: BoxDecoration(
-                                                  color: Color.fromRGBO(
-                                                      27, 26, 26, 1),
-                                                  borderRadius:
-                                                      BorderRadius.circular(15),
-                                                ),
-                                                child: Center(
-                                                  child: Column(
-                                                    children: [
-                                                      Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Image.asset(
-                                                            'assets/images/service.png',
-                                                            height: 45,
-                                                            width: 45,
-                                                          ),
-                                                          SizedBox(
-                                                            width: 25,
-                                                          ),
-                                                          Flexible(
-                                                            fit: FlexFit.loose,
-                                                            child: Text(
-                                                              "Autocenter Srl",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .center,
-                                                              style: GoogleFonts
-                                                                  .outfit(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                color: Colors
-                                                                    .white,
-                                                                fontSize: 20,
-                                                              ),
-                                                              softWrap: true,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 10),
-                                                        child:
-                                                            RatingBar.builder(
-                                                                initialRating:
-                                                                    3,
-                                                                unratedColor:
-                                                                    Colors
-                                                                        .white,
-                                                                ignoreGestures:
-                                                                    true,
-                                                                minRating: 1,
-                                                                direction: Axis
-                                                                    .horizontal,
-                                                                allowHalfRating:
-                                                                    true,
-                                                                itemCount: 5,
-                                                                itemSize: 30,
-                                                                itemPadding:
-                                                                    const EdgeInsets
-                                                                        .symmetric(
-                                                                  horizontal: 1,
-                                                                ),
-                                                                itemBuilder:
-                                                                    (context,
-                                                                            _) =>
-                                                                        const Icon(
-                                                                          Icons
-                                                                              .star,
-                                                                          color: Color.fromRGBO(
-                                                                              221,
-                                                                              182,
-                                                                              95,
-                                                                              1),
-                                                                        ),
-                                                                onRatingUpdate:
-                                                                    (rating) {
-                                                                  print(rating);
-                                                                }),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 10),
-                                                        child: Text(
-                                                          "24-10-2020",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: GoogleFonts
-                                                              .outfit(
-                                                            //fontWeight: FontWeight.bold,
-                                                            color:
-                                                                Color.fromRGBO(
-                                                                    212,
-                                                                    212,
-                                                                    212,
-                                                                    1),
-                                                            fontSize: 18,
-                                                          ),
-                                                          softWrap: true,
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .symmetric(
-                                                                vertical: 10),
-                                                        child: Divider(
-                                                          color: Colors.black,
-                                                          thickness: 2,
-                                                        ),
-                                                      ),
-                                                      Text(
-                                                        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus',
-                                                        style:
-                                                            GoogleFonts.roboto(
-                                                          color: Colors.white,
-                                                          fontSize: 18,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              )),
-                                        ],
-                                      ),
-                                    ),
-                                  ]),
-                                  Container(
-                                      child: Text('bbb',
-                                          style:
-                                              TextStyle(color: Colors.white))),
-                                ],
-                              )),
-                        ],
-                      ),
-                      Positioned(
-                        top:
-                            60.0, // (background container size) - (circle height / 2)
-                        child: Container(
-                          height: 115.0,
-                          width: 115.0,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/service.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                      )
-                    ],
+        mobile: Scaffold(
+          resizeToAvoidBottomInset: false,
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+          appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
+            elevation: 0,
+          ),
+          body: NestedScrollView(
+            controller: _scrollController,
+            headerSliverBuilder: (context, value) {
+              return [
+                SliverToBoxAdapter(child: _buildCarousel()),
+                SliverToBoxAdapter(
+                  child: Center(
+                    child: TabBar(
+                      controller: _tabController,
+                      labelColor: Colors.white,
+                      isScrollable: true,
+                      tabs: myTabs,
+                    ),
                   ),
                 ),
-              )),
+              ];
+            },
+            body: Container(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  _buildTabContext(2),
+                  _buildTabContext(200),
+                  // _buildTabContext(2)
+                ],
+              ),
+            ),
+          ),
         ),
         tablet: Scaffold(
           backgroundColor: const Color(0xFF1B1A1A),
