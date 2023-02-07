@@ -152,6 +152,21 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                                 }),
                                           ),
                                           Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 10),
+                                            child: Text(
+                                              "24-10-2020",
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.outfit(
+                                                //fontWeight: FontWeight.bold,
+                                                color: Color.fromRGBO(
+                                                    212, 212, 212, 1),
+                                                fontSize: 18,
+                                              ),
+                                              softWrap: true,
+                                            ),
+                                          ),
+                                          Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 vertical: 10),
                                             child: Divider(
@@ -243,6 +258,21 @@ class _UserAccounPageState extends State<UserAccounPage> {
                                                 onRatingUpdate: (rating) {
                                                   print(rating);
                                                 }),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 10),
+                                            child: Text(
+                                              "24-10-2020",
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.outfit(
+                                                //fontWeight: FontWeight.bold,
+                                                color: Color.fromRGBO(
+                                                    212, 212, 212, 1),
+                                                fontSize: 18,
+                                              ),
+                                              softWrap: true,
+                                            ),
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.symmetric(
