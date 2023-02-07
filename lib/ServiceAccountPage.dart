@@ -174,7 +174,254 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                 controller: _tabController,
                 children: [
                   _buildTabContext(2),
-                  _buildTabContext(200),
+                  ListView.builder(
+                      physics: const ClampingScrollPhysics(),
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Column(
+                          children: [
+                            Container(
+                              height: 70,
+                              width: double.infinity,
+                              color: Colors.black,
+                              child: Padding(
+                                padding: const EdgeInsets.all(15),
+                                child: Text("Reviews:",
+                                    style: GoogleFonts.outfit(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                    )),
+                              ),
+                            ),
+
+                            /// Review
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 25),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 65),
+                                      child: Container(
+                                        padding: EdgeInsets.all(15),
+                                        decoration: BoxDecoration(
+                                          color: Color.fromRGBO(27, 26, 26, 1),
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                    'assets/images/snoo2.jpg',
+                                                    height: 45,
+                                                    width: 45,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 25,
+                                                  ),
+                                                  Flexible(
+                                                    fit: FlexFit.loose,
+                                                    child: Text(
+                                                      "Nume Prenume",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: GoogleFonts.outfit(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: Colors.white,
+                                                        fontSize: 20,
+                                                      ),
+                                                      softWrap: true,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 10),
+                                                child: RatingBar.builder(
+                                                    initialRating: 3,
+                                                    unratedColor: Colors.white,
+                                                    ignoreGestures: true,
+                                                    minRating: 1,
+                                                    direction: Axis.horizontal,
+                                                    allowHalfRating: true,
+                                                    itemCount: 5,
+                                                    itemSize: 30,
+                                                    itemPadding:
+                                                        const EdgeInsets
+                                                            .symmetric(
+                                                      horizontal: 1,
+                                                    ),
+                                                    itemBuilder: (context, _) =>
+                                                        const Icon(
+                                                          Icons.star,
+                                                          color: Color.fromRGBO(
+                                                              221, 182, 95, 1),
+                                                        ),
+                                                    onRatingUpdate: (rating) {
+                                                      print(rating);
+                                                    }),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 10),
+                                                child: Text(
+                                                  "24-10-2020",
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts.outfit(
+                                                    //fontWeight: FontWeight.bold,
+                                                    color: Color.fromRGBO(
+                                                        212, 212, 212, 1),
+                                                    fontSize: 18,
+                                                  ),
+                                                  softWrap: true,
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 10),
+                                                child: Divider(
+                                                  color: Colors.black,
+                                                  thickness: 2,
+                                                ),
+                                              ),
+                                              Text(
+                                                'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus',
+                                                style: GoogleFonts.roboto(
+                                                  color: Colors.white,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      )),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 25),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 65),
+                                      child: Container(
+                                        padding: EdgeInsets.all(15),
+                                        decoration: BoxDecoration(
+                                          color: Color.fromRGBO(27, 26, 26, 1),
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                    'assets/images/snoo2.jpg',
+                                                    height: 45,
+                                                    width: 45,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 25,
+                                                  ),
+                                                  Flexible(
+                                                    fit: FlexFit.loose,
+                                                    child: Text(
+                                                      "Nume Prenume",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: GoogleFonts.outfit(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: Colors.white,
+                                                        fontSize: 20,
+                                                      ),
+                                                      softWrap: true,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 10),
+                                                child: RatingBar.builder(
+                                                    initialRating: 3,
+                                                    unratedColor: Colors.white,
+                                                    ignoreGestures: true,
+                                                    minRating: 1,
+                                                    direction: Axis.horizontal,
+                                                    allowHalfRating: true,
+                                                    itemCount: 5,
+                                                    itemSize: 30,
+                                                    itemPadding:
+                                                        const EdgeInsets
+                                                            .symmetric(
+                                                      horizontal: 1,
+                                                    ),
+                                                    itemBuilder: (context, _) =>
+                                                        const Icon(
+                                                          Icons.star,
+                                                          color: Color.fromRGBO(
+                                                              221, 182, 95, 1),
+                                                        ),
+                                                    onRatingUpdate: (rating) {
+                                                      print(rating);
+                                                    }),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 10),
+                                                child: Text(
+                                                  "24-10-2020",
+                                                  textAlign: TextAlign.center,
+                                                  style: GoogleFonts.outfit(
+                                                    //fontWeight: FontWeight.bold,
+                                                    color: Color.fromRGBO(
+                                                        212, 212, 212, 1),
+                                                    fontSize: 18,
+                                                  ),
+                                                  softWrap: true,
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 10),
+                                                child: Divider(
+                                                  color: Colors.black,
+                                                  thickness: 2,
+                                                ),
+                                              ),
+                                              Text(
+                                                'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus',
+                                                style: GoogleFonts.roboto(
+                                                  color: Colors.white,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ],
+                        );
+                      })
+                  //_buildTabContext(200),
                   // _buildTabContext(2)
                 ],
               ),
