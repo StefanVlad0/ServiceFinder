@@ -18,7 +18,7 @@ class _FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     return Responsive(
       mobile: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           body: SafeArea(
             child: Container(
               ///gradientul de sus
@@ -26,8 +26,8 @@ class _FirstPageState extends State<FirstPage> {
                 gradient: RadialGradient(
                   center: Alignment.topCenter,
                   colors: [
-                    Color.fromRGBO(50, 15, 98, 0.8),
-                    Color(0xFF000534),
+                    Color.fromRGBO(61, 1, 159, 0.8),
+                    Color.fromARGB(255, 0, 0, 0),
                   ],
                   stops: [
                     0.5,
@@ -77,7 +77,7 @@ class _FirstPageState extends State<FirstPage> {
                             fontSize: 26,
                           )),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF310F62),
+                        backgroundColor: Color.fromRGBO(101, 36, 163, 1),
                         padding: const EdgeInsets.symmetric(
                             horizontal: 85, vertical: 20),
                         shape: RoundedRectangleBorder(
@@ -117,7 +117,7 @@ class _FirstPageState extends State<FirstPage> {
                               width: 4, color: Color.fromRGBO(55, 22, 113, 1)),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)),
-                          backgroundColor: Color(0xFF000534),
+                          backgroundColor: Color.fromARGB(255, 0, 0, 0),
                           padding: const EdgeInsets.symmetric(
                               vertical: 20, horizontal: 85)),
                       onPressed: () {

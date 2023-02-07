@@ -18,9 +18,9 @@ class _SignInPageUserState extends State<SignInPageUser> {
     return Responsive(
         mobile: Scaffold(
             resizeToAvoidBottomInset: false,
-            backgroundColor: const Color(0xFF000534),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             appBar: AppBar(
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               elevation: 0,
             ),
             body: SafeArea(
@@ -238,7 +238,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                               fontSize: 26,
                             )),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF310F62),
+                          backgroundColor: Color.fromRGBO(101, 36, 163, 1),
                           padding: const EdgeInsets.symmetric(
                               horizontal: 85, vertical: 20),
                           shape: RoundedRectangleBorder(

@@ -19,9 +19,9 @@ class _TypeOfAccState extends State<TypeOfAcc> {
     return Responsive(
       mobile: Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
-            backgroundColor: Color(0xFF000534),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             elevation: 0,
           ),
           body: SafeArea(
@@ -38,7 +38,7 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                       //padding:
                       //  EdgeInsets.symmetric(vertical: 150, horizontal: 25),
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(0, 7, 72, 1),
+                        color: Color.fromRGBO(27, 26, 26, 1),
                         borderRadius: BorderRadius.circular(50),
                       ),
 
