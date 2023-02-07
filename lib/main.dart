@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router/go_router.dart';
+import 'package:servicefinder/ServiceAccountPage.dart';
 import 'package:servicefinder/TypeOfAcc.dart';
 import 'package:servicefinder/UserAccountPage.dart';
 import 'package:servicefinder/login_page.dart';
@@ -49,6 +50,10 @@ GoRouter router = GoRouter(
     GoRoute(
       path: '/userAccount', //asta e initial page
       builder: (context, state) => UserAccounPage(),
+    ),
+    GoRoute(
+      path: '/serviceAccount', //asta e initial page
+      builder: (context, state) => ServiceAccountPage(),
     ),
   ],
 );

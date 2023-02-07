@@ -244,7 +244,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)),
                         ),
-                        onPressed: (() => context.push('/userAccount')),
+                        onPressed: (() => context.push('/serviceAccount')),
                       ),
 
                       ///Spatiu dintre buton Sign In si logo
