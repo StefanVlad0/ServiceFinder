@@ -66,6 +66,25 @@ class _UserAccounPageState extends State<UserAccounPage> {
                             ),
                           ),
                         ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: Image.asset(
+                                  'assets/images/sharethis-128.png'),
+                              iconSize: 10,
+                              onPressed: () {},
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            IconButton(
+                              icon: Image.asset('assets/images/flag-128.png'),
+                              iconSize: 10,
+                              onPressed: () {},
+                            ),
+                          ],
+                        ),
                         Container(
                           height: 70,
                           width: double.infinity,
