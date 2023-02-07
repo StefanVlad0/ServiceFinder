@@ -414,182 +414,186 @@ class _UserAccounPageState extends State<UserAccounPage> {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
-                            child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Total Reviews:23',
-                                    style: TextStyle(
-                                      color: Colors.white.withOpacity(0.6),
+                            child: Container(
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Total Reviews:23',
+                                      style: TextStyle(
+                                        color: Colors.white.withOpacity(0.6),
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Divider(
-                                    color: Colors.white.withOpacity(0.5),
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'assets/images/service.png',
-                                        scale: 3,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            child: Text('Service SRL',
-                                                style: TextStyle(
-                                                    color: Colors.white)),
-                                          ),
-                                          Text(
-                                            '3.55',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )
-                                        ],
-                                      ),
-                                      Spacer(),
-                                      Expanded(
-                                        flex: 5,
-                                        child: Container(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              RatingBar.builder(
-                                                  initialRating: 3,
-                                                  ignoreGestures: true,
-                                                  minRating: 1,
-                                                  direction: Axis.horizontal,
-                                                  allowHalfRating: true,
-                                                  itemCount: 5,
-                                                  itemSize: 30,
-                                                  itemPadding: const EdgeInsets
-                                                      .symmetric(
-                                                    horizontal: 1,
-                                                  ),
-                                                  itemBuilder: (context, _) =>
-                                                      const Icon(
-                                                        Icons.star,
-                                                        color: Color.fromRGBO(
-                                                            221, 182, 95, 1),
-                                                      ),
-                                                  onRatingUpdate: (rating) {
-                                                    print(rating);
-                                                  }),
-                                              Text(
-                                                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 18),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Divider(
-                                    color: Colors.white.withOpacity(0.5),
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Image.asset(
-                                        'assets/images/service.png',
-                                        scale: 3,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            child: Text('Service SRL',
-                                                style: TextStyle(
-                                                    color: Colors.white)),
-                                          ),
-                                          Text(
-                                            '3.55',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )
-                                        ],
-                                      ),
-                                      Spacer(
-                                        flex: 1,
-                                      ),
-                                      Expanded(
-                                        flex: 5,
-                                        child: Container(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              RatingBar.builder(
-                                                  initialRating: 3,
-                                                  ignoreGestures: true,
-                                                  minRating: 1,
-                                                  direction: Axis.horizontal,
-                                                  allowHalfRating: true,
-                                                  itemCount: 5,
-                                                  itemSize: 30,
-                                                  itemPadding: const EdgeInsets
-                                                      .symmetric(
-                                                    horizontal: 1,
-                                                  ),
-                                                  itemBuilder: (context, _) =>
-                                                      const Icon(
-                                                        Icons.star,
-                                                        color: Color.fromRGBO(
-                                                            221, 182, 95, 1),
-                                                      ),
-                                                  onRatingUpdate: (rating) {
-                                                    print(rating);
-                                                  }),
-                                              Text(
-                                                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 18),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      'See more...',
-                                      style: TextStyle(color: Colors.white),
+                                    SizedBox(
+                                      height: 10,
                                     ),
-                                  )
-                                ]),
+                                    Divider(
+                                      color: Colors.white.withOpacity(0.5),
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Image.asset(
+                                          'assets/images/service.png',
+                                          scale: 3,
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              child: Text('Service SRL',
+                                                  style: TextStyle(
+                                                      color: Colors.white)),
+                                            ),
+                                            Text(
+                                              '3.55',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            )
+                                          ],
+                                        ),
+                                        Spacer(),
+                                        Expanded(
+                                          flex: 5,
+                                          child: Container(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                RatingBar.builder(
+                                                    initialRating: 3,
+                                                    ignoreGestures: true,
+                                                    minRating: 1,
+                                                    direction: Axis.horizontal,
+                                                    allowHalfRating: true,
+                                                    itemCount: 5,
+                                                    itemSize: 30,
+                                                    itemPadding:
+                                                        const EdgeInsets
+                                                            .symmetric(
+                                                      horizontal: 1,
+                                                    ),
+                                                    itemBuilder: (context, _) =>
+                                                        const Icon(
+                                                          Icons.star,
+                                                          color: Color.fromRGBO(
+                                                              221, 182, 95, 1),
+                                                        ),
+                                                    onRatingUpdate: (rating) {
+                                                      print(rating);
+                                                    }),
+                                                Text(
+                                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Divider(
+                                      color: Colors.white.withOpacity(0.5),
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Image.asset(
+                                          'assets/images/service.png',
+                                          scale: 3,
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              child: Text('Service SRL',
+                                                  style: TextStyle(
+                                                      color: Colors.white)),
+                                            ),
+                                            Text(
+                                              '3.55',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            )
+                                          ],
+                                        ),
+                                        Spacer(
+                                          flex: 1,
+                                        ),
+                                        Expanded(
+                                          flex: 5,
+                                          child: Container(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                RatingBar.builder(
+                                                    initialRating: 3,
+                                                    ignoreGestures: true,
+                                                    minRating: 1,
+                                                    direction: Axis.horizontal,
+                                                    allowHalfRating: true,
+                                                    itemCount: 5,
+                                                    itemSize: 30,
+                                                    itemPadding:
+                                                        const EdgeInsets
+                                                            .symmetric(
+                                                      horizontal: 1,
+                                                    ),
+                                                    itemBuilder: (context, _) =>
+                                                        const Icon(
+                                                          Icons.star,
+                                                          color: Color.fromRGBO(
+                                                              221, 182, 95, 1),
+                                                        ),
+                                                    onRatingUpdate: (rating) {
+                                                      print(rating);
+                                                    }),
+                                                Text(
+                                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Center(
+                                      child: Text(
+                                        'See more...',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    )
+                                  ]),
+                            ),
                           ),
                         ),
                       ],
@@ -640,305 +644,503 @@ class _UserAccounPageState extends State<UserAccounPage> {
                       ),
                       Expanded(
                           flex: 5,
-                          child: Container(
-                              child: Column(
-                            children: [
-                              SizedBox(
-                                height: 30,
-                              ),
-                              Image.asset(
-                                  'assets/images/UsersPhotosDesktop.png'),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Nume Prenume',
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                        Text(
-                                          'user',
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                        Text(
-                                          'Reviews: 12 • ServiceFinder age: 1y 4m ',
-                                          style: TextStyle(
-                                              color: Colors.purple,
-                                              fontWeight: FontWeight.bold),
-                                        )
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        ElevatedButton(
-                                          child: Text('Settings',
-                                              textAlign: TextAlign.center,
-                                              style: GoogleFonts.roboto(
-                                                color: Colors.white,
-                                                fontSize: 15,
-                                              )),
-                                          style: ElevatedButton.styleFrom(
-                                            backgroundColor: Color(0xFF1B1A1A),
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 30, vertical: 20),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                          ),
-                                          onPressed: (() =>
-                                              context.go('/userAccount')),
-                                        ),
-                                        ElevatedButton(
-                                          child: Text('Share',
-                                              textAlign: TextAlign.center,
-                                              style: GoogleFonts.roboto(
-                                                color: Colors.white,
-                                                fontSize: 15,
-                                              )),
-                                          style: ElevatedButton.styleFrom(
-                                            backgroundColor: Color(0xFF1B1A1A),
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 30, vertical: 20),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                          ),
-                                          onPressed: (() =>
-                                              context.go('/userAccount')),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                          child: SingleChildScrollView(
+                            child: Container(
+                                child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 30,
                                 ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Align(
-                                  alignment: Alignment.center,
-                                  child: Container(
-                                    child: Text(
-                                      'Reviews',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 20),
-                                    ),
-                                  )),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color.fromRGBO(27, 26, 26, 1),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Total Reviews:23',
-                                          style: TextStyle(
-                                            color:
-                                                Colors.white.withOpacity(0.6),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Divider(
-                                          color: Colors.white.withOpacity(0.5),
-                                        ),
-                                        SizedBox(
-                                          height: 15,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Image.asset(
-                                              'assets/images/service.png',
-                                              scale: 3,
-                                            ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  child: Text('Service SRL',
-                                                      style: TextStyle(
-                                                          color: Colors.white)),
-                                                ),
-                                                Text(
-                                                  '3.55',
-                                                  style: TextStyle(
-                                                      color: Colors.white),
-                                                )
-                                              ],
-                                            ),
-                                            Spacer(),
-                                            Expanded(
-                                              flex: 5,
-                                              child: Container(
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    RatingBar.builder(
-                                                        initialRating: 3,
-                                                        ignoreGestures: true,
-                                                        minRating: 1,
-                                                        direction:
-                                                            Axis.horizontal,
-                                                        allowHalfRating: true,
-                                                        itemCount: 5,
-                                                        itemSize: 30,
-                                                        itemPadding:
-                                                            const EdgeInsets
-                                                                .symmetric(
-                                                          horizontal: 1,
-                                                        ),
-                                                        itemBuilder:
-                                                            (context, _) =>
-                                                                const Icon(
-                                                                  Icons.star,
-                                                                  color: Color
-                                                                      .fromRGBO(
-                                                                          221,
-                                                                          182,
-                                                                          95,
-                                                                          1),
-                                                                ),
-                                                        onRatingUpdate:
-                                                            (rating) {
-                                                          print(rating);
-                                                        }),
-                                                    Text(
-                                                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
-                                                      style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 18),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Divider(
-                                          color: Colors.white.withOpacity(0.5),
-                                        ),
-                                        SizedBox(
-                                          height: 15,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Image.asset(
-                                              'assets/images/service.png',
-                                              scale: 3,
-                                            ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  child: Text('Service SRL',
-                                                      style: TextStyle(
-                                                          color: Colors.white)),
-                                                ),
-                                                Text(
-                                                  '3.55',
-                                                  style: TextStyle(
-                                                      color: Colors.white),
-                                                )
-                                              ],
-                                            ),
-                                            Spacer(
-                                              flex: 1,
-                                            ),
-                                            Expanded(
-                                              flex: 5,
-                                              child: Container(
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    RatingBar.builder(
-                                                        initialRating: 3,
-                                                        ignoreGestures: true,
-                                                        minRating: 1,
-                                                        direction:
-                                                            Axis.horizontal,
-                                                        allowHalfRating: true,
-                                                        itemCount: 5,
-                                                        itemSize: 30,
-                                                        itemPadding:
-                                                            const EdgeInsets
-                                                                .symmetric(
-                                                          horizontal: 1,
-                                                        ),
-                                                        itemBuilder:
-                                                            (context, _) =>
-                                                                const Icon(
-                                                                  Icons.star,
-                                                                  color: Color
-                                                                      .fromRGBO(
-                                                                          221,
-                                                                          182,
-                                                                          95,
-                                                                          1),
-                                                                ),
-                                                        onRatingUpdate:
-                                                            (rating) {
-                                                          print(rating);
-                                                        }),
-                                                    Text(
-                                                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
-                                                      style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 18),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Center(
-                                          child: Text(
-                                            'See more...',
+                                Image.asset(
+                                    'assets/images/UsersPhotosDesktop.png'),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Nume Prenume',
                                             style:
                                                 TextStyle(color: Colors.white),
                                           ),
-                                        )
-                                      ]),
+                                          Text(
+                                            'user',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                          Text(
+                                            'Reviews: 12 • ServiceFinder age: 1y 4m ',
+                                            style: TextStyle(
+                                                color: Colors.purple,
+                                                fontWeight: FontWeight.bold),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          ElevatedButton(
+                                            child: Text('Settings',
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.roboto(
+                                                  color: Colors.white,
+                                                  fontSize: 15,
+                                                )),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  Color(0xFF1B1A1A),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 30,
+                                                      vertical: 20),
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          50)),
+                                            ),
+                                            onPressed: (() =>
+                                                context.go('/userAccount')),
+                                          ),
+                                          ElevatedButton(
+                                            child: Text('Share',
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.roboto(
+                                                  color: Colors.white,
+                                                  fontSize: 15,
+                                                )),
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  Color(0xFF1B1A1A),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 30,
+                                                      vertical: 20),
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          50)),
+                                            ),
+                                            onPressed: (() =>
+                                                context.go('/userAccount')),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ))),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Align(
+                                    alignment: Alignment.center,
+                                    child: Container(
+                                      child: Text(
+                                        'Reviews',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
+                                      ),
+                                    )),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(27, 26, 26, 1),
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Total Reviews:23',
+                                              style: TextStyle(
+                                                color: Colors.white
+                                                    .withOpacity(0.6),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/service.png',
+                                                  scale: 3,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text('Service SRL',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
+                                                    ),
+                                                    Text(
+                                                      '3.55',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Spacer(),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Container(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RatingBar.builder(
+                                                            initialRating: 3,
+                                                            ignoreGestures:
+                                                                true,
+                                                            minRating: 1,
+                                                            direction:
+                                                                Axis.horizontal,
+                                                            allowHalfRating:
+                                                                true,
+                                                            itemCount: 5,
+                                                            itemSize: 30,
+                                                            itemPadding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 1,
+                                                            ),
+                                                            itemBuilder:
+                                                                (context, _) =>
+                                                                    const Icon(
+                                                                      Icons
+                                                                          .star,
+                                                                      color: Color.fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                    ),
+                                                            onRatingUpdate:
+                                                                (rating) {
+                                                              print(rating);
+                                                            }),
+                                                        Text(
+                                                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 18),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/service.png',
+                                                  scale: 3,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text('Service SRL',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
+                                                    ),
+                                                    Text(
+                                                      '3.55',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Spacer(
+                                                  flex: 1,
+                                                ),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Container(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RatingBar.builder(
+                                                            initialRating: 3,
+                                                            ignoreGestures:
+                                                                true,
+                                                            minRating: 1,
+                                                            direction:
+                                                                Axis.horizontal,
+                                                            allowHalfRating:
+                                                                true,
+                                                            itemCount: 5,
+                                                            itemSize: 30,
+                                                            itemPadding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 1,
+                                                            ),
+                                                            itemBuilder:
+                                                                (context, _) =>
+                                                                    const Icon(
+                                                                      Icons
+                                                                          .star,
+                                                                      color: Color.fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                    ),
+                                                            onRatingUpdate:
+                                                                (rating) {
+                                                              print(rating);
+                                                            }),
+                                                        Text(
+                                                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 18),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/service.png',
+                                                  scale: 3,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text('Service SRL',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
+                                                    ),
+                                                    Text(
+                                                      '3.55',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Spacer(),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Container(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RatingBar.builder(
+                                                            initialRating: 3,
+                                                            ignoreGestures:
+                                                                true,
+                                                            minRating: 1,
+                                                            direction:
+                                                                Axis.horizontal,
+                                                            allowHalfRating:
+                                                                true,
+                                                            itemCount: 5,
+                                                            itemSize: 30,
+                                                            itemPadding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 1,
+                                                            ),
+                                                            itemBuilder:
+                                                                (context, _) =>
+                                                                    const Icon(
+                                                                      Icons
+                                                                          .star,
+                                                                      color: Color.fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                    ),
+                                                            onRatingUpdate:
+                                                                (rating) {
+                                                              print(rating);
+                                                            }),
+                                                        Text(
+                                                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 18),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/service.png',
+                                                  scale: 3,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text('Service SRL',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
+                                                    ),
+                                                    Text(
+                                                      '3.55',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Spacer(),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Container(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RatingBar.builder(
+                                                            initialRating: 3,
+                                                            ignoreGestures:
+                                                                true,
+                                                            minRating: 1,
+                                                            direction:
+                                                                Axis.horizontal,
+                                                            allowHalfRating:
+                                                                true,
+                                                            itemCount: 5,
+                                                            itemSize: 30,
+                                                            itemPadding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 1,
+                                                            ),
+                                                            itemBuilder:
+                                                                (context, _) =>
+                                                                    const Icon(
+                                                                      Icons
+                                                                          .star,
+                                                                      color: Color.fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                    ),
+                                                            onRatingUpdate:
+                                                                (rating) {
+                                                              print(rating);
+                                                            }),
+                                                        Text(
+                                                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 18),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ]),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )),
+                          )),
                       Spacer(
                         flex: 2,
                       )
