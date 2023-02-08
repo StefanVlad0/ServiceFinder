@@ -24,6 +24,8 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
   late TabController _tabController;
   late ScrollController _scrollController;
   late bool fixedScroll;
+  String? _dateValue;
+  String? _ratingValue;
 
   Widget _buildCarousel() {
     return Stack(
@@ -463,7 +465,7 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                               child: Row(
                                 children: [
                                   Spacer(),
-                                  DecoratedBox(
+                                  Container(
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(67, 67, 67, 1),
                                       borderRadius: BorderRadius.circular(50),
@@ -472,15 +474,21 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 30),
                                       child: DropdownButton(
-                                        value: "rating",
+                                        //value: "rating",
+                                        hint: Text("Rating",
+                                            style: GoogleFonts.outfit(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                            )),
+                                        value: _ratingValue,
                                         items: [
                                           DropdownMenuItem(
-                                              child: Text("Rating",
+                                              child: Text("All",
                                                   style: GoogleFonts.outfit(
                                                     color: Colors.white,
                                                     fontSize: 18,
                                                   )),
-                                              value: "rating"),
+                                              value: "All"),
                                           DropdownMenuItem(
                                               child: Text("5 stars",
                                                   style: GoogleFonts.outfit(
@@ -517,15 +525,19 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                                   )),
                                               value: "1 star"),
                                         ],
-                                        onChanged: (context) => {print("aa")},
+                                        onChanged: (String? value) =>
+                                            setState(() {
+                                          _ratingValue = value ?? "";
+                                        }),
                                         underline: Container(),
                                         iconEnabledColor: Colors.white,
-                                        dropdownColor: Colors.green,
+                                        dropdownColor:
+                                            Color.fromRGBO(67, 67, 67, 1),
                                       ),
                                     ),
                                   ),
                                   Spacer(),
-                                  DecoratedBox(
+                                  Container(
                                     decoration: BoxDecoration(
                                       color: Color.fromRGBO(67, 67, 67, 1),
                                       borderRadius: BorderRadius.circular(50),
@@ -534,15 +546,13 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 30),
                                       child: DropdownButton(
-                                        value: "date",
+                                        hint: Text("Date",
+                                            style: GoogleFonts.outfit(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                            )),
+                                        value: _dateValue,
                                         items: [
-                                          DropdownMenuItem(
-                                              child: Text("Date",
-                                                  style: GoogleFonts.outfit(
-                                                    color: Colors.white,
-                                                    fontSize: 18,
-                                                  )),
-                                              value: "date"),
                                           DropdownMenuItem(
                                               child: Text("Newest",
                                                   style: GoogleFonts.outfit(
@@ -558,10 +568,14 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                                   )),
                                               value: "Oldest"),
                                         ],
-                                        onChanged: (context) => {print("aa")},
+                                        onChanged: (String? value) =>
+                                            setState(() {
+                                          _dateValue = value ?? "";
+                                        }),
                                         underline: Container(),
                                         iconEnabledColor: Colors.white,
-                                        dropdownColor: Colors.green,
+                                        dropdownColor:
+                                            Color.fromRGBO(67, 67, 67, 1),
                                       ),
                                     ),
                                   ),
