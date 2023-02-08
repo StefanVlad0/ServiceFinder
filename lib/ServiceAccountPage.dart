@@ -848,15 +848,385 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                             SizedBox(
                               height: 20,
                             ),
-                            Align(
-                                alignment: Alignment.center,
-                                child: Container(
-                                  child: Text(
-                                    'Reviews',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                            Column(
+                              children: [
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 20),
+                                      child: ElevatedButton(
+                                        child: Text('Leave a review',
+                                            style: GoogleFonts.roboto(
+                                              color: Colors.white,
+                                              fontSize: 22,
+                                            )),
+                                        style: ElevatedButton.styleFrom(
+                                            side: const BorderSide(
+                                                width: 3,
+                                                color: Color.fromRGBO(
+                                                    178, 178, 178, 1)),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            backgroundColor:
+                                                Color.fromARGB(255, 0, 0, 0),
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 20, horizontal: 25)),
+                                        onPressed: () {
+                                          return context.push('/typeOfAccount');
+                                        },
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Spacer(),
+                                        DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Color.fromRGBO(67, 67, 67, 1),
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 30),
+                                            child: DropdownButton(
+                                              value: "rating",
+                                              items: [
+                                                DropdownMenuItem(
+                                                    child: Text("Rating",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "rating"),
+                                                DropdownMenuItem(
+                                                    child: Text("5 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "5 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("4 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "4 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("3 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "3 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("2 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "2 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("1 star",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "1 star"),
+                                              ],
+                                              onChanged: (context) =>
+                                                  {print("aa")},
+                                              underline: Container(),
+                                              iconEnabledColor: Colors.white,
+                                              dropdownColor: Colors.green,
+                                            ),
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Color.fromRGBO(67, 67, 67, 1),
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 30),
+                                            child: DropdownButton(
+                                              value: "date",
+                                              items: [
+                                                DropdownMenuItem(
+                                                    child: Text("Date",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "date"),
+                                                DropdownMenuItem(
+                                                    child: Text("Newest",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "Newest"),
+                                                DropdownMenuItem(
+                                                    child: Text("Oldest",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "Oldest"),
+                                              ],
+                                              onChanged: (context) =>
+                                                  {print("aa")},
+                                              underline: Container(),
+                                              iconEnabledColor: Colors.white,
+                                              dropdownColor: Colors.green,
+                                            ),
+                                          ),
+                                        ),
+                                        Spacer(),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(27, 26, 26, 1),
+                                    borderRadius: BorderRadius.circular(15),
                                   ),
-                                )),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Total Reviews:23',
+                                              style: TextStyle(
+                                                color: Colors.white
+                                                    .withOpacity(0.6),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/service.png',
+                                                  scale: 3,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text('Service SRL',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
+                                                    ),
+                                                    Text(
+                                                      '3.55',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Spacer(),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Container(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RatingBar.builder(
+                                                            initialRating: 3,
+                                                            ignoreGestures:
+                                                                true,
+                                                            minRating: 1,
+                                                            direction:
+                                                                Axis.horizontal,
+                                                            allowHalfRating:
+                                                                true,
+                                                            itemCount: 5,
+                                                            itemSize: 30,
+                                                            itemPadding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 1,
+                                                            ),
+                                                            itemBuilder:
+                                                                (context, _) =>
+                                                                    const Icon(
+                                                                      Icons
+                                                                          .star,
+                                                                      color: Color.fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                    ),
+                                                            onRatingUpdate:
+                                                                (rating) {
+                                                              print(rating);
+                                                            }),
+                                                        Text(
+                                                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 18),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset(
+                                                  'assets/images/service.png',
+                                                  scale: 3,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text('Service SRL',
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white)),
+                                                    ),
+                                                    Text(
+                                                      '3.55',
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )
+                                                  ],
+                                                ),
+                                                Spacer(
+                                                  flex: 1,
+                                                ),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Container(
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RatingBar.builder(
+                                                            initialRating: 3,
+                                                            ignoreGestures:
+                                                                true,
+                                                            minRating: 1,
+                                                            direction:
+                                                                Axis.horizontal,
+                                                            allowHalfRating:
+                                                                true,
+                                                            itemCount: 5,
+                                                            itemSize: 30,
+                                                            itemPadding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                              horizontal: 1,
+                                                            ),
+                                                            itemBuilder:
+                                                                (context, _) =>
+                                                                    const Icon(
+                                                                      Icons
+                                                                          .star,
+                                                                      color: Color.fromRGBO(
+                                                                          221,
+                                                                          182,
+                                                                          95,
+                                                                          1),
+                                                                    ),
+                                                            onRatingUpdate:
+                                                                (rating) {
+                                                              print(rating);
+                                                            }),
+                                                        Text(
+                                                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 18),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Divider(
+                                              color:
+                                                  Colors.white.withOpacity(0.5),
+                                            ),
+                                            SizedBox(
+                                              height: 15,
+                                            ),
+                                          ]),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                             SizedBox(
                               height: 15,
                             ),
@@ -1147,22 +1517,212 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                       child: Container(
                                           child: Column(
                                         children: [
-                                          SizedBox(
-                                            height: 30,
-                                          ),
-                                          SizedBox(
-                                            height: 20,
-                                          ),
-                                          Align(
-                                              alignment: Alignment.center,
-                                              child: Container(
-                                                child: Text(
-                                                  'Reviews',
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 20),
+                                          Column(
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 20),
+                                                child: ElevatedButton(
+                                                  child: Text('Leave a review',
+                                                      style: GoogleFonts.roboto(
+                                                        color: Colors.white,
+                                                        fontSize: 22,
+                                                      )),
+                                                  style: ElevatedButton.styleFrom(
+                                                      side: const BorderSide(
+                                                          width: 3,
+                                                          color: Color.fromRGBO(
+                                                              178,
+                                                              178,
+                                                              178,
+                                                              1)),
+                                                      shape: RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                  50)),
+                                                      backgroundColor:
+                                                          Color.fromARGB(
+                                                              255, 0, 0, 0),
+                                                      padding: const EdgeInsets
+                                                              .symmetric(
+                                                          vertical: 20,
+                                                          horizontal: 25)),
+                                                  onPressed: () {
+                                                    return context
+                                                        .push('/typeOfAccount');
+                                                  },
                                                 ),
-                                              )),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Spacer(),
+                                                  DecoratedBox(
+                                                    decoration: BoxDecoration(
+                                                      color: Color.fromRGBO(
+                                                          67, 67, 67, 1),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              50),
+                                                    ),
+                                                    child: Padding(
+                                                      padding: const EdgeInsets
+                                                              .symmetric(
+                                                          horizontal: 30),
+                                                      child: DropdownButton(
+                                                        value: "rating",
+                                                        items: [
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "Rating",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "rating"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "5 stars",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "5 stars"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "4 stars",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "4 stars"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "3 stars",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "3 stars"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "2 stars",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "2 stars"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "1 star",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "1 star"),
+                                                        ],
+                                                        onChanged: (context) =>
+                                                            {print("aa")},
+                                                        underline: Container(),
+                                                        iconEnabledColor:
+                                                            Colors.white,
+                                                        dropdownColor:
+                                                            Colors.green,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Spacer(),
+                                                  DecoratedBox(
+                                                    decoration: BoxDecoration(
+                                                      color: Color.fromRGBO(
+                                                          67, 67, 67, 1),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              50),
+                                                    ),
+                                                    child: Padding(
+                                                      padding: const EdgeInsets
+                                                              .symmetric(
+                                                          horizontal: 30),
+                                                      child: DropdownButton(
+                                                        value: "date",
+                                                        items: [
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "Date",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "date"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "Newest",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "Newest"),
+                                                          DropdownMenuItem(
+                                                              child: Text(
+                                                                  "Oldest",
+                                                                  style:
+                                                                      GoogleFonts
+                                                                          .outfit(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18,
+                                                                  )),
+                                                              value: "Oldest"),
+                                                        ],
+                                                        onChanged: (context) =>
+                                                            {print("aa")},
+                                                        underline: Container(),
+                                                        iconEnabledColor:
+                                                            Colors.white,
+                                                        dropdownColor:
+                                                            Colors.green,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Spacer(),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
                                           SizedBox(
                                             height: 15,
                                           ),
