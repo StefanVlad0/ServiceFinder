@@ -244,6 +244,95 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
     );
   }
 
+  _buildProfileInfoD() {
+    return Center(
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(27, 26, 26, 1),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Full address:",
+                      style: GoogleFonts.outfit(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 20,
+                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30, bottom: 15),
+                    child: Text("adresa adresa",
+                        style: GoogleFonts.outfit(
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text("Email address:",
+                        style: GoogleFonts.outfit(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30, bottom: 15),
+                    child: Text("example@domain.com",
+                        style: GoogleFonts.outfit(
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text("Phone number:",
+                        style: GoogleFonts.outfit(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30, bottom: 15),
+                    child: Text("0722222222",
+                        style: GoogleFonts.outfit(
+                          color: Colors.white,
+                          fontSize: 20,
+                        )),
+                  ),
+                ],
+              ),
+              ElevatedButton(
+                child: Text('Schedule',
+                    style: GoogleFonts.roboto(
+                      color: Colors.white,
+                      fontSize: 20,
+                    )),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromRGBO(101, 36, 163, 1),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50)),
+                ),
+                onPressed: (() => context.go('/signinPageService')),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   void initState() {
     _scrollController = ScrollController();
@@ -856,7 +945,7 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                           ];
                         },
                         body: TabBarView(controller: _tabController, children: [
-                          _buildTabContext(2),
+                          _buildProfileInfoD(),
                           SingleChildScrollView(
                             child: Container(
                                 child: Column(
@@ -1574,7 +1663,7 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                               body: TabBarView(
                                   controller: _tabController,
                                   children: [
-                                    _buildTabContext(2),
+                                    _buildProfileInfoD(),
                                     SingleChildScrollView(
                                       child: Container(
                                           child: Column(
