@@ -191,9 +191,9 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
   }
 
   _scrollListener() {
-    if (fixedScroll) {
-      _scrollController.jumpTo(0);
-    }
+    // if (fixedScroll) {
+    //   _scrollController.jumpTo(0);
+    // }
   }
 
   _smoothScrollToTop() {
@@ -244,7 +244,105 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  _buildTabContext(2),
+                  ListView.builder(
+                      physics: const ClampingScrollPhysics(),
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 30),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(27, 26, 26, 1),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text("Full address:",
+                                        style: GoogleFonts.outfit(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 30, bottom: 15),
+                                    child: Text("adresa adresa",
+                                        style: GoogleFonts.outfit(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text("Email address:",
+                                        style: GoogleFonts.outfit(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 30, bottom: 15),
+                                    child: Text("example@domain.com",
+                                        style: GoogleFonts.outfit(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Text("Phone number:",
+                                        style: GoogleFonts.outfit(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 30, bottom: 15),
+                                    child: Text("0722222222",
+                                        style: GoogleFonts.outfit(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        )),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: ElevatedButton(
+                                      child: Text('Schedule',
+                                          style: GoogleFonts.roboto(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          )),
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor:
+                                            Color.fromRGBO(101, 36, 163, 1),
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 60, vertical: 15),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(50)),
+                                      ),
+                                      onPressed: (() =>
+                                          context.push('/signinPageService')),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      }),
+                  //_buildTabContext(2),
                   ListView.builder(
                       physics: const ClampingScrollPhysics(),
                       itemCount: 1,
