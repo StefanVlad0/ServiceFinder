@@ -306,81 +306,85 @@ class _FirstPageState extends State<FirstPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ///Logo
-                    Image.asset(
-                      'assets/images/LogoMarit.png',
+                    Expanded(
+                      child: Image.asset(
+                        'assets/images/LogoMarit.png',
+                      ),
                     ),
                     SizedBox(
                       width: 150,
                     ),
 
                     ///Text "Service Finder"
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text("Service Finder",
-                              style: GoogleFonts.outfit(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 32,
-                              )),
-                          Container(
-                            width: 500,
-                            child: Text(
-                              "    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ElevatedButton(
-                                child: Text('Login',
-                                    style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 26,
-                                    )),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color(0xFF310F62),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 85, vertical: 20),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(50)),
+                    Expanded(
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text("Service Finder",
+                                style: GoogleFonts.outfit(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 32,
+                                )),
+                            Expanded(
+                              child: Container(
+                                width: 500,
+                                child: Text(
+                                  "    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
                                 ),
-                                onPressed: (() => context.go('/loginPage')),
                               ),
-                              SizedBox(
-                                width: 30,
-                              ),
-                              ElevatedButton(
-                                  child: Text('Sign In',
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  child: Text('Login',
                                       style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         fontSize: 26,
                                       )),
                                   style: ElevatedButton.styleFrom(
-                                      side: const BorderSide(
-                                          width: 4,
-                                          color:
-                                              Color.fromRGBO(55, 22, 113, 1)),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50)),
-                                      backgroundColor:
-                                          Color.fromARGB(255, 0, 0, 0),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 20, horizontal: 85)),
-                                  onPressed: (() =>
-                                      context.go('/typeOfAccount'))),
-                            ],
-                          ),
-                        ]),
+                                    backgroundColor: Color(0xFF310F62),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 85, vertical: 20),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
+                                  ),
+                                  onPressed: (() => context.go('/loginPage')),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                ElevatedButton(
+                                    child: Text('Sign In',
+                                        style: GoogleFonts.roboto(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 26,
+                                        )),
+                                    style: ElevatedButton.styleFrom(
+                                        side: const BorderSide(
+                                            width: 4,
+                                            color:
+                                                Color.fromRGBO(55, 22, 113, 1)),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(50)),
+                                        backgroundColor:
+                                            Color.fromARGB(255, 0, 0, 0),
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 20, horizontal: 85)),
+                                    onPressed: (() =>
+                                        context.go('/typeOfAccount'))),
+                              ],
+                            ),
+                          ]),
+                    ),
                   ],
                 ),
               ),
