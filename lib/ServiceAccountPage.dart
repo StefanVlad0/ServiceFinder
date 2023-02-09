@@ -26,6 +26,7 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
   late bool fixedScroll;
   String? _dateValue;
   String? _ratingValue;
+  bool _isVisible = false;
 
   Widget _buildCarousel() {
     return Stack(
@@ -1714,10 +1715,41 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                                           vertical: 20,
                                                           horizontal: 25)),
                                                   onPressed: () {
-                                                    return context
-                                                        .push('/typeOfAccount');
+                                                    setState(() {
+                                                      _isVisible = !_isVisible;
+                                                    });
                                                   },
                                                 ),
+                                              ),
+                                              Visibility(
+                                                visible: _isVisible,
+                                                child: TextField(
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                  decoration: InputDecoration(
+                                                    enabledBorder:
+                                                        UnderlineInputBorder(
+                                                      //<-- SEE HERE
+                                                      borderSide: BorderSide(
+                                                          width: 2,
+                                                          color: Color.fromRGBO(
+                                                              255,
+                                                              255,
+                                                              255,
+                                                              0.4)),
+                                                    ),
+                                                    hintText: 'Write Here',
+                                                    hintStyle: TextStyle(
+                                                      color: Color.fromRGBO(
+                                                          255, 255, 255, 0.4),
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 15,
                                               ),
                                               Row(
                                                 children: [
