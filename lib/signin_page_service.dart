@@ -533,7 +533,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                               BorderRadius.circular(50)),
                                     ),
                                     onPressed: (() =>
-                                        context.go('/userAccount')),
+                                        context.go('/serviceAccount')),
                                   ),
                                 ),
                               ),
@@ -724,7 +724,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                           50)),
                                             ),
                                             onPressed: (() =>
-                                                context.go('/userAccount')),
+                                                context.go('/serviceAccount')),
                                           ),
                                         ),
                                       ),
