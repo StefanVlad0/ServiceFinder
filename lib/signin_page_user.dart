@@ -263,10 +263,10 @@ class _SignInPageUserState extends State<SignInPageUser> {
               ),
             )),
         desktop: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               actions: [
                 Row(
                   children: [
@@ -281,7 +281,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        return context.go('/signinPage');
+                        return context.go('/typeOfAccount');
                       },
                     ),
                     SizedBox(
@@ -305,7 +305,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                   flex: 6,
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Color(0xFF474B84).withOpacity(0.3),
+                        color: Color.fromRGBO(27, 26, 26, 1),
                         border: Border.all(),
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     // width: 1000,
@@ -511,8 +511,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                               ],
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 50),
+                              padding: const EdgeInsets.only(right: 250),
                               child: Container(
                                 child: Center(
                                   child: ElevatedButton(
@@ -551,10 +550,10 @@ class _SignInPageUserState extends State<SignInPageUser> {
           ),
         ),
         tablet: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               actions: [
                 Row(
                   children: [
@@ -569,7 +568,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        return context.go('/signinPage');
+                        return context.go('/typeOfAccount');
                       },
                     ),
                     SizedBox(
@@ -595,7 +594,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                     flex: 2,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFF474B84).withOpacity(0.3),
+                          color: Color.fromRGBO(27, 26, 26, 1),
                           border: Border.all(),
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: Container(
