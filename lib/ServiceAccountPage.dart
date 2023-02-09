@@ -1006,141 +1006,160 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                             },
                                           ),
                                         ),
-                                        Row(
-                                          children: [
-                                            Spacer(),
-                                            DecoratedBox(
-                                              decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    67, 67, 67, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50),
-                                              ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 30),
-                                                child: DropdownButton(
-                                                  value: "rating",
-                                                  items: [
-                                                    DropdownMenuItem(
-                                                        child: Text("Rating",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "rating"),
-                                                    DropdownMenuItem(
-                                                        child: Text("5 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "5 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("4 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "4 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("3 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "3 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("2 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "2 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("1 star",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "1 star"),
-                                                  ],
-                                                  onChanged: (context) =>
-                                                      {print("aa")},
-                                                  underline: Container(),
-                                                  iconEnabledColor:
-                                                      Colors.white,
-                                                  dropdownColor: Colors.green,
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(bottom: 25),
+                                          child: Row(
+                                            children: [
+                                              Spacer(),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color.fromRGBO(
+                                                      67, 67, 67, 1),
+                                                  borderRadius:
+                                                      BorderRadius.circular(50),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 30),
+                                                  child: DropdownButton(
+                                                    //value: "rating",
+                                                    hint: Text("Rating",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: _ratingValue,
+                                                    items: [
+                                                      DropdownMenuItem(
+                                                          child: Text("All",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "All"),
+                                                      DropdownMenuItem(
+                                                          child: Text("5 stars",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "5 stars"),
+                                                      DropdownMenuItem(
+                                                          child: Text("4 stars",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "4 stars"),
+                                                      DropdownMenuItem(
+                                                          child: Text("3 stars",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "3 stars"),
+                                                      DropdownMenuItem(
+                                                          child: Text("2 stars",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "2 stars"),
+                                                      DropdownMenuItem(
+                                                          child: Text("1 star",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "1 star"),
+                                                    ],
+                                                    onChanged:
+                                                        (String? value) =>
+                                                            setState(() {
+                                                      _ratingValue =
+                                                          value ?? "";
+                                                    }),
+                                                    underline: Container(),
+                                                    iconEnabledColor:
+                                                        Colors.white,
+                                                    dropdownColor:
+                                                        Color.fromRGBO(
+                                                            67, 67, 67, 1),
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Spacer(),
-                                            DecoratedBox(
-                                              decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    67, 67, 67, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50),
-                                              ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 30),
-                                                child: DropdownButton(
-                                                  value: "date",
-                                                  items: [
-                                                    DropdownMenuItem(
-                                                        child: Text("Date",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "date"),
-                                                    DropdownMenuItem(
-                                                        child: Text("Newest",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "Newest"),
-                                                    DropdownMenuItem(
-                                                        child: Text("Oldest",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "Oldest"),
-                                                  ],
-                                                  onChanged: (context) =>
-                                                      {print("aa")},
-                                                  underline: Container(),
-                                                  iconEnabledColor:
-                                                      Colors.white,
-                                                  dropdownColor: Colors.green,
+                                              Spacer(),
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color.fromRGBO(
+                                                      67, 67, 67, 1),
+                                                  borderRadius:
+                                                      BorderRadius.circular(50),
+                                                ),
+                                                child: Padding(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 30),
+                                                  child: DropdownButton(
+                                                    hint: Text("Date",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: _dateValue,
+                                                    items: [
+                                                      DropdownMenuItem(
+                                                          child: Text("Newest",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "Newest"),
+                                                      DropdownMenuItem(
+                                                          child: Text("Oldest",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: "Oldest"),
+                                                    ],
+                                                    onChanged:
+                                                        (String? value) =>
+                                                            setState(() {
+                                                      _dateValue = value ?? "";
+                                                    }),
+                                                    underline: Container(),
+                                                    iconEnabledColor:
+                                                        Colors.white,
+                                                    dropdownColor:
+                                                        Color.fromRGBO(
+                                                            67, 67, 67, 1),
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Spacer(),
-                                          ],
+                                              Spacer(),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -1751,172 +1770,192 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                               SizedBox(
                                                 height: 15,
                                               ),
-                                              Row(
-                                                children: [
-                                                  Spacer(),
-                                                  DecoratedBox(
-                                                    decoration: BoxDecoration(
-                                                      color: Color.fromRGBO(
-                                                          67, 67, 67, 1),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              50),
-                                                    ),
-                                                    child: Padding(
-                                                      padding: const EdgeInsets
-                                                              .symmetric(
-                                                          horizontal: 30),
-                                                      child: DropdownButton(
-                                                        value: "rating",
-                                                        items: [
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "Rating",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "rating"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "5 stars",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "5 stars"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "4 stars",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "4 stars"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "3 stars",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "3 stars"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "2 stars",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "2 stars"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "1 star",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "1 star"),
-                                                        ],
-                                                        onChanged: (context) =>
-                                                            {print("aa")},
-                                                        underline: Container(),
-                                                        iconEnabledColor:
-                                                            Colors.white,
-                                                        dropdownColor:
-                                                            Colors.green,
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    bottom: 25),
+                                                child: Row(
+                                                  children: [
+                                                    Spacer(),
+                                                    Container(
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromRGBO(
+                                                            67, 67, 67, 1),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(50),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .symmetric(
+                                                                horizontal: 30),
+                                                        child: DropdownButton(
+                                                          //value: "rating",
+                                                          hint: Text("Rating",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: _ratingValue,
+                                                          items: [
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "All",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value: "All"),
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "5 stars",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "5 stars"),
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "4 stars",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "4 stars"),
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "3 stars",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "3 stars"),
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "2 stars",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "2 stars"),
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "1 star",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "1 star"),
+                                                          ],
+                                                          onChanged:
+                                                              (String? value) =>
+                                                                  setState(() {
+                                                            _ratingValue =
+                                                                value ?? "";
+                                                          }),
+                                                          underline:
+                                                              Container(),
+                                                          iconEnabledColor:
+                                                              Colors.white,
+                                                          dropdownColor:
+                                                              Color.fromRGBO(67,
+                                                                  67, 67, 1),
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  Spacer(),
-                                                  DecoratedBox(
-                                                    decoration: BoxDecoration(
-                                                      color: Color.fromRGBO(
-                                                          67, 67, 67, 1),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              50),
-                                                    ),
-                                                    child: Padding(
-                                                      padding: const EdgeInsets
-                                                              .symmetric(
-                                                          horizontal: 30),
-                                                      child: DropdownButton(
-                                                        value: "date",
-                                                        items: [
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "Date",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "date"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "Newest",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "Newest"),
-                                                          DropdownMenuItem(
-                                                              child: Text(
-                                                                  "Oldest",
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .outfit(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                  )),
-                                                              value: "Oldest"),
-                                                        ],
-                                                        onChanged: (context) =>
-                                                            {print("aa")},
-                                                        underline: Container(),
-                                                        iconEnabledColor:
-                                                            Colors.white,
-                                                        dropdownColor:
-                                                            Colors.green,
+                                                    Spacer(),
+                                                    Container(
+                                                      decoration: BoxDecoration(
+                                                        color: Color.fromRGBO(
+                                                            67, 67, 67, 1),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(50),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .symmetric(
+                                                                horizontal: 30),
+                                                        child: DropdownButton(
+                                                          hint: Text("Date",
+                                                              style: GoogleFonts
+                                                                  .outfit(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 18,
+                                                              )),
+                                                          value: _dateValue,
+                                                          items: [
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "Newest",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "Newest"),
+                                                            DropdownMenuItem(
+                                                                child: Text(
+                                                                    "Oldest",
+                                                                    style: GoogleFonts
+                                                                        .outfit(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          18,
+                                                                    )),
+                                                                value:
+                                                                    "Oldest"),
+                                                          ],
+                                                          onChanged:
+                                                              (String? value) =>
+                                                                  setState(() {
+                                                            _dateValue =
+                                                                value ?? "";
+                                                          }),
+                                                          underline:
+                                                              Container(),
+                                                          iconEnabledColor:
+                                                              Colors.white,
+                                                          dropdownColor:
+                                                              Color.fromRGBO(67,
+                                                                  67, 67, 1),
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  Spacer(),
-                                                ],
+                                                    Spacer(),
+                                                  ],
+                                                ),
                                               ),
                                             ],
                                           ),
