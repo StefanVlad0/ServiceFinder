@@ -533,8 +533,34 @@ class _ServiceAccountPageState extends State<ServiceAccountPage>
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 10, horizontal: 25)),
                                 onPressed: () {
-                                  return context.push('/typeOfAccount');
+                                  setState(() {
+                                    _isVisible = !_isVisible;
+                                  });
                                 },
+                              ),
+                            ),
+                            Visibility(
+                              visible: _isVisible,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 10),
+                                child: TextField(
+                                  style: TextStyle(color: Colors.white),
+                                  decoration: InputDecoration(
+                                    enabledBorder: UnderlineInputBorder(
+                                      //<-- SEE HERE
+                                      borderSide: BorderSide(
+                                          width: 2,
+                                          color: Color.fromRGBO(
+                                              255, 255, 255, 0.4)),
+                                    ),
+                                    hintText: 'Write Here',
+                                    hintStyle: TextStyle(
+                                      color: Color.fromRGBO(255, 255, 255, 0.4),
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                             Container(
