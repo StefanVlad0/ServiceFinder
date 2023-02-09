@@ -263,10 +263,10 @@ class _SignInPageServiceState extends State<SignInPageService> {
               ),
             )),
         desktop: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               actions: [
                 Row(
                   children: [
@@ -281,7 +281,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        return context.go('/signinPage');
+                        return context.go('/typeOfAccount');
                       },
                     ),
                     SizedBox(
@@ -305,7 +305,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                   flex: 6,
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Color(0xFF474B84).withOpacity(0.3),
+                        color: Color.fromRGBO(27, 26, 26, 1),
                         border: Border.all(),
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     // width: 1000,
@@ -552,10 +552,10 @@ class _SignInPageServiceState extends State<SignInPageService> {
           ),
         ),
         tablet: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               actions: [
                 Row(
                   children: [
@@ -570,7 +570,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                     InkWell(
                       child: Text('Sign In'),
                       onTap: () {
-                        return context.go('/signinPage');
+                        return context.go('/typeOfAccount');
                       },
                     ),
                     SizedBox(
@@ -596,7 +596,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                     flex: 2,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFF474B84).withOpacity(0.3),
+                          color: Color.fromRGBO(27, 26, 26, 1),
                           border: Border.all(),
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: Container(
