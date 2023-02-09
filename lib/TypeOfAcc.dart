@@ -110,10 +110,10 @@ class _TypeOfAccState extends State<TypeOfAcc> {
             ),
           )),
       desktop: Scaffold(
-        backgroundColor: const Color(0xFF000534),
+        backgroundColor: Colors.black,
         appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color(0xFF000534),
+            backgroundColor: Colors.black,
             actions: [
               Row(
                 children: [
@@ -151,7 +151,7 @@ class _TypeOfAccState extends State<TypeOfAcc> {
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: Color(0xFF474B84).withOpacity(0.3),
+                    color: Color.fromRGBO(27, 26, 26, 1),
                     border: Border.all(),
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 width: 550,
@@ -191,7 +191,8 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                                     fontSize: 23,
                                   )),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xFF310F62),
+                                backgroundColor:
+                                    Color.fromRGBO(101, 36, 163, 1),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 50, vertical: 25),
                                 shape: RoundedRectangleBorder(
@@ -213,10 +214,11 @@ class _TypeOfAccState extends State<TypeOfAcc> {
                               style: ElevatedButton.styleFrom(
                                   side: const BorderSide(
                                       width: 4,
-                                      color: Color.fromRGBO(55, 22, 113, 1)),
+                                      color: Color.fromRGBO(101, 36, 163, 1)),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50)),
-                                  backgroundColor: Color(0xFF000534),
+                                  backgroundColor:
+                                      Color.fromRGBO(101, 36, 163, 1),
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 25, horizontal: 50)),
                               onPressed: () => context.go('/signinPageService'),
@@ -233,10 +235,10 @@ class _TypeOfAccState extends State<TypeOfAcc> {
         ),
       ),
       tablet: Scaffold(
-        backgroundColor: const Color(0xFF000534),
+        backgroundColor: Colors.black,
         appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color(0xFF000534),
+            backgroundColor: Colors.black,
             actions: [
               Row(
                 children: [
@@ -266,89 +268,92 @@ class _TypeOfAccState extends State<TypeOfAcc> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/LogoMarit.png',
+              Expanded(
+                child: Image.asset(
+                  'assets/images/LogoMarit.png',
+                ),
               ),
-              SizedBox(
-                width: 200,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Color(0xFF474B84).withOpacity(0.3),
-                    border: Border.all(),
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                width: 550,
-                height: 400,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 500,
-                      child: Text(
-                        'What type of account do you want to create?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 32,
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(27, 26, 26, 1),
+                      border: Border.all(),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 500,
+                        child: Text(
+                          'What type of account do you want to create?',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 32,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
+                      SizedBox(
+                        height: 50,
+                      ),
 
-                    //rand cu buton customer si service
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          child: Center(
-                            child: ElevatedButton(
-                              child: Text('Customer',
-                                  style: GoogleFonts.roboto(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                    fontSize: 23,
-                                  )),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xFF310F62),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 50, vertical: 20),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(50)),
-                              ),
-                              onPressed: () => context.go('/signinPageUser'),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Center(
-                            child: ElevatedButton(
-                              child: Text('Service',
-                                  style: GoogleFonts.roboto(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                    fontSize: 26,
-                                  )),
-                              style: ElevatedButton.styleFrom(
-                                  side: const BorderSide(
-                                      width: 4,
-                                      color: Color.fromRGBO(55, 22, 113, 1)),
+                      //rand cu buton customer si service
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            child: Center(
+                              child: ElevatedButton(
+                                child: Text('Customer',
+                                    style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 23,
+                                    )),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromRGBO(101, 36, 163, 1),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 50, vertical: 20),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50)),
-                                  backgroundColor: Color(0xFF000534),
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 20, horizontal: 50)),
-                              onPressed: () => context.go('/signinPageService'),
+                                ),
+                                onPressed: () => context.go('/signinPageUser'),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          Container(
+                            child: Center(
+                              child: ElevatedButton(
+                                child: Text('Service',
+                                    style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 26,
+                                    )),
+                                style: ElevatedButton.styleFrom(
+                                    side: const BorderSide(
+                                        width: 4,
+                                        color: Color.fromRGBO(101, 36, 163, 1)),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
+                                    backgroundColor:
+                                        Color.fromRGBO(101, 36, 163, 1),
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 20, horizontal: 50)),
+                                onPressed: () =>
+                                    context.go('/signinPageService'),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
