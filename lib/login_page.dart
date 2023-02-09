@@ -142,10 +142,10 @@ class _LoginPageState extends State<LoginPage> {
             ),
           )),
       desktop: Scaffold(
-        backgroundColor: const Color(0xFF000534),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color(0xFF000534),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             actions: [
               Row(
                 children: [
@@ -183,7 +183,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: Color(0xFF474B84).withOpacity(0.3),
+                    color: Color.fromRGBO(27, 26, 26, 1),
                     border: Border.all(),
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 width: 550,
@@ -282,10 +282,10 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       tablet: Scaffold(
-        backgroundColor: const Color(0xFF000534),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Color(0xFF000534),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             actions: [
               Row(
                 children: [
@@ -315,106 +315,111 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/LogoMarit.png',
+              Expanded(
+                child: Image.asset(
+                  'assets/images/LogoMarit.png',
+                ),
               ),
               SizedBox(
                 width: 200,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Color(0xFF474B84).withOpacity(0.3),
-                    border: Border.all(),
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                width: 550,
-                height: 400,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 500,
-                      child: TextField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 2,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Email address',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 500,
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            //<-- SEE HERE
-                            borderSide: BorderSide(
-                                width: 3,
-                                color: Color.fromRGBO(255, 255, 255, 0.4)),
-                          ),
-                          hintText: 'Password',
-                          hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
-
-                    ///Buton Sign In
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 50),
-                      child: Container(
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(99, 26, 144, 0.5),
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Login',
-                            style: GoogleFonts.roboto(
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(27, 26, 26, 1),
+                      border: Border.all(),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 500,
+                        child: TextField(
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 2,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Email address',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 26,
                             ),
                           ),
                         ),
                       ),
-                    ),
+                      Container(
+                        width: 500,
+                        child: TextField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              //<-- SEE HERE
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 0.4)),
+                            ),
+                            hintText: 'Password',
+                            hintStyle: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 50,
+                      ),
 
-                    SizedBox(
-                      height: 20,
-                    ),
-                    InkWell(
-                      child: Text("Don’t have an account?",
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(255, 255, 255, 0.4),
-                            fontSize: 16,
-                            letterSpacing: 1,
-                            decoration: TextDecoration.underline,
-                          )),
-                      onTap: (() {
-                        return context.go('/typeOfAccount');
-                      }),
-                    ),
-                  ],
+                      ///Buton Sign In
+                      Container(
+                        width: 550,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 50),
+                          child: Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(99, 26, 144, 0.5),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Login',
+                                style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 26,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 20,
+                      ),
+                      InkWell(
+                        child: Text("Don’t have an account?",
+                            style: GoogleFonts.roboto(
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(255, 255, 255, 0.4),
+                              fontSize: 16,
+                              letterSpacing: 1,
+                              decoration: TextDecoration.underline,
+                            )),
+                        onTap: (() {
+                          return context.go('/typeOfAccount');
+                        }),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
