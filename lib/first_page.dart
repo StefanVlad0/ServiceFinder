@@ -135,10 +135,10 @@ class _FirstPageState extends State<FirstPage> {
             ),
           )),
       desktop: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               actions: [
                 Row(
                   children: [
@@ -165,7 +165,7 @@ class _FirstPageState extends State<FirstPage> {
                   center: Alignment.bottomCenter,
                   colors: [
                     Color.fromRGBO(50, 15, 98, 0.8),
-                    Color(0xFF000534),
+                    Color.fromARGB(255, 0, 0, 0),
                   ],
                   stops: [
                     0.5,
@@ -244,7 +244,8 @@ class _FirstPageState extends State<FirstPage> {
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(50)),
-                                    backgroundColor: Color(0xFF000534),
+                                    backgroundColor:
+                                        Color.fromARGB(255, 0, 0, 0),
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 20, horizontal: 85)),
                                 onPressed: (() => context.go('/typeOfAccount')),
@@ -258,10 +259,10 @@ class _FirstPageState extends State<FirstPage> {
             ),
           )),
       tablet: Scaffold(
-          backgroundColor: const Color(0xFF000534),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFF000534),
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
               actions: [
                 Row(
                   children: [
@@ -290,7 +291,7 @@ class _FirstPageState extends State<FirstPage> {
                   center: Alignment.centerLeft,
                   colors: [
                     Color.fromRGBO(50, 15, 98, 0.8),
-                    Color(0xFF000534),
+                    Color.fromARGB(255, 0, 0, 0),
                   ],
                   stops: [
                     0.5,
@@ -371,7 +372,8 @@ class _FirstPageState extends State<FirstPage> {
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(50)),
-                                      backgroundColor: Color(0xFF000534),
+                                      backgroundColor:
+                                          Color.fromARGB(255, 0, 0, 0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 20, horizontal: 85)),
                                   onPressed: (() =>
