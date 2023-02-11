@@ -373,7 +373,6 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                       SizedBox(
                                         height: 10,
                                       ),
-                                      //flag
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
@@ -613,6 +612,9 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                             ),
                                           ),
                                         ),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
                                       ),
                                     ],
                                   ),
