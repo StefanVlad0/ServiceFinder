@@ -15,6 +15,8 @@ class _SignInPageUserState extends State<SignInPageUser> {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
+    String? _countryValue;
+    String? _cityValue;
     return Responsive(
         mobile: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -309,16 +311,17 @@ class _SignInPageUserState extends State<SignInPageUser> {
                         border: Border.all(),
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     // width: 1000,
-                    height: 300,
+                    height: 320,
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               // mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
                                   flex: 2,
@@ -366,26 +369,176 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                           ),
                                         ),
                                       ),
-                                      Container(
-                                        //width: 400,
-                                        child: TextField(
-                                          style: TextStyle(color: Colors.white),
-                                          decoration: InputDecoration(
-                                            enabledBorder: UnderlineInputBorder(
-                                              //<-- SEE HERE
-                                              borderSide: BorderSide(
-                                                  width: 2,
-                                                  color: Color.fromRGBO(
-                                                      255, 255, 255, 0.4)),
-                                            ),
-                                            hintText: 'Password',
-                                            hintStyle: TextStyle(
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4),
-                                              fontWeight: FontWeight.bold,
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      //flag
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          DecoratedBox(
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                    width: 4,
+                                                    color: Color.fromRGBO(
+                                                        255, 255, 255, 0.2)),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(50.0))),
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 15, right: 15),
+                                              child: DropdownButton(
+                                                hint: Text("Country",
+                                                    style: GoogleFonts.outfit(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                    )),
+                                                value: _countryValue,
+                                                items: [
+                                                  DropdownMenuItem(
+                                                      child: Text("All",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "All"),
+                                                  DropdownMenuItem(
+                                                      child: Text("5 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "5 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("4 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "4 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("3 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "3 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("2 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "2 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("1 star",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "1 star"),
+                                                ],
+                                                onChanged: (String? value) =>
+                                                    setState(() {
+                                                  _countryValue = value ?? "";
+                                                }),
+                                                underline: Container(),
+                                                iconEnabledColor: Colors.white,
+                                                dropdownColor: Color.fromRGBO(
+                                                    67, 67, 67, 1),
+                                              ),
                                             ),
                                           ),
-                                        ),
+                                          DecoratedBox(
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                    width: 4,
+                                                    color: Color.fromRGBO(
+                                                        255, 255, 255, 0.2)),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(50.0))),
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 15, right: 15),
+                                              child: DropdownButton(
+                                                //value: "rating",
+                                                hint: Text("City",
+                                                    style: GoogleFonts.outfit(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                    )),
+                                                value: _cityValue,
+                                                items: [
+                                                  DropdownMenuItem(
+                                                      child: Text("All",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "All"),
+                                                  DropdownMenuItem(
+                                                      child: Text("5 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "5 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("4 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "4 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("3 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "3 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("2 stars",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "2 stars"),
+                                                  DropdownMenuItem(
+                                                      child: Text("1 star",
+                                                          style: GoogleFonts
+                                                              .outfit(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                          )),
+                                                      value: "1 star"),
+                                                ],
+                                                onChanged: (String? value) =>
+                                                    setState(() {
+                                                  _cityValue = value ?? "";
+                                                }),
+                                                underline: Container(),
+                                                iconEnabledColor: Colors.white,
+                                                dropdownColor: Color.fromRGBO(
+                                                    67, 67, 67, 1),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                       Container(
                                         //width: 400,
@@ -399,7 +552,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                                   color: Color.fromRGBO(
                                                       255, 255, 255, 0.4)),
                                             ),
-                                            hintText: 'Confirm password',
+                                            hintText: 'Phone Number',
                                             hintStyle: TextStyle(
                                               color: Color.fromRGBO(
                                                   255, 255, 255, 0.4),
@@ -454,7 +607,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                                   color: Color.fromRGBO(
                                                       255, 255, 255, 0.4)),
                                             ),
-                                            hintText: 'Phone number',
+                                            hintText: 'Password',
                                             hintStyle: TextStyle(
                                               color: Color.fromRGBO(
                                                   255, 255, 255, 0.4),
@@ -475,28 +628,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                                   color: Color.fromRGBO(
                                                       255, 255, 255, 0.4)),
                                             ),
-                                            hintText: 'Contry',
-                                            hintStyle: TextStyle(
-                                              color: Color.fromRGBO(
-                                                  255, 255, 255, 0.4),
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        //width: 400,
-                                        child: TextField(
-                                          style: TextStyle(color: Colors.white),
-                                          decoration: InputDecoration(
-                                            enabledBorder: UnderlineInputBorder(
-                                              //<-- SEE HERE
-                                              borderSide: BorderSide(
-                                                  width: 2,
-                                                  color: Color.fromRGBO(
-                                                      255, 255, 255, 0.4)),
-                                            ),
-                                            hintText: 'City',
+                                            hintText: 'Confirm Password',
                                             hintStyle: TextStyle(
                                               color: Color.fromRGBO(
                                                   255, 255, 255, 0.4),
@@ -513,26 +645,23 @@ class _SignInPageUserState extends State<SignInPageUser> {
                             Padding(
                               padding: const EdgeInsets.only(right: 250),
                               child: Container(
-                                child: Center(
-                                  child: ElevatedButton(
-                                    child: Text('Sign In',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.roboto(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                          fontSize: 24,
-                                        )),
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Color(0xFF310F62),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 50, vertical: 20),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50)),
-                                    ),
-                                    onPressed: (() =>
-                                        context.go('/userAccount')),
+                                child: ElevatedButton(
+                                  child: Text('Sign In',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontSize: 24,
+                                      )),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color(0xFF310F62),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 50, vertical: 20),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
                                   ),
+                                  onPressed: (() => context.go('/userAccount')),
                                 ),
                               ),
                             ),
@@ -651,6 +780,256 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                         ),
                                       ),
                                     ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    //flag
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        DecoratedBox(
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  width: 4,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.2)),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(50.0))),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 15, right: 15),
+                                            child: DropdownButton(
+                                              hint: Text("Country",
+                                                  style: GoogleFonts.outfit(
+                                                    color: Colors.white,
+                                                    fontSize: 18,
+                                                  )),
+                                              value: _countryValue,
+                                              items: [
+                                                DropdownMenuItem(
+                                                    child: Text("All",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "All"),
+                                                DropdownMenuItem(
+                                                    child: Text("5 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "5 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("4 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "4 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("3 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "3 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("2 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "2 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("1 star",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "1 star"),
+                                              ],
+                                              onChanged: (String? value) =>
+                                                  setState(() {
+                                                _countryValue = value ?? "";
+                                              }),
+                                              underline: Container(),
+                                              iconEnabledColor: Colors.white,
+                                              dropdownColor:
+                                                  Color.fromRGBO(67, 67, 67, 1),
+                                            ),
+                                          ),
+                                        ),
+                                        DecoratedBox(
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  width: 4,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.2)),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(50.0))),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 15, right: 15),
+                                            child: DropdownButton(
+                                              //value: "rating",
+                                              hint: Text("City",
+                                                  style: GoogleFonts.outfit(
+                                                    color: Colors.white,
+                                                    fontSize: 18,
+                                                  )),
+                                              value: _cityValue,
+                                              items: [
+                                                DropdownMenuItem(
+                                                    child: Text("All",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "All"),
+                                                DropdownMenuItem(
+                                                    child: Text("5 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "5 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("4 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "4 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("3 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "3 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("2 stars",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "2 stars"),
+                                                DropdownMenuItem(
+                                                    child: Text("1 star",
+                                                        style:
+                                                            GoogleFonts.outfit(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                        )),
+                                                    value: "1 star"),
+                                              ],
+                                              onChanged: (String? value) =>
+                                                  setState(() {
+                                                _cityValue = value ?? "";
+                                              }),
+                                              underline: Container(),
+                                              iconEnabledColor: Colors.white,
+                                              dropdownColor:
+                                                  Color.fromRGBO(67, 67, 67, 1),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Container(
+                                      //width: 400,
+                                      child: TextField(
+                                        style: TextStyle(color: Colors.white),
+                                        decoration: InputDecoration(
+                                          enabledBorder: UnderlineInputBorder(
+                                            //<-- SEE HERE
+                                            borderSide: BorderSide(
+                                                width: 2,
+                                                color: Color.fromRGBO(
+                                                    255, 255, 255, 0.4)),
+                                          ),
+                                          hintText: 'Phone Number',
+                                          hintStyle: TextStyle(
+                                            color: Color.fromRGBO(
+                                                255, 255, 255, 0.4),
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8),
+                                      child: Container(
+                                        child: ElevatedButton(
+                                          child: Text('Sign In',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.roboto(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 24,
+                                              )),
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Color(0xFF310F62),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 50, vertical: 20),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                          ),
+                                          onPressed: (() =>
+                                              context.go('/userAccount')),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 60,
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      //width: 400,
+                                      child: TextField(
+                                        style: TextStyle(color: Colors.white),
+                                        decoration: InputDecoration(
+                                          enabledBorder: UnderlineInputBorder(
+                                            //<-- SEE HERE
+                                            borderSide: BorderSide(
+                                                width: 2,
+                                                color: Color.fromRGBO(
+                                                    255, 255, 255, 0.4)),
+                                          ),
+                                          hintText: 'Last Name',
+                                          hintStyle: TextStyle(
+                                            color: Color.fromRGBO(
+                                                255, 255, 255, 0.4),
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                     Container(
                                       //width: 400,
                                       child: TextField(
@@ -684,134 +1063,7 @@ class _SignInPageUserState extends State<SignInPageUser> {
                                                 color: Color.fromRGBO(
                                                     255, 255, 255, 0.4)),
                                           ),
-                                          hintText: 'Confirm password',
-                                          hintStyle: TextStyle(
-                                            color: Color.fromRGBO(
-                                                255, 255, 255, 0.4),
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 50),
-                                      child: Container(
-                                        child: Center(
-                                          child: ElevatedButton(
-                                            child: Text('Sign In',
-                                                textAlign: TextAlign.center,
-                                                style: GoogleFonts.roboto(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
-                                                  fontSize: 24,
-                                                )),
-                                            style: ElevatedButton.styleFrom(
-                                              backgroundColor:
-                                                  Color(0xFF310F62),
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 50,
-                                                      vertical: 20),
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          50)),
-                                            ),
-                                            onPressed: (() =>
-                                                context.go('/userAccount')),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 60,
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      child: TextField(
-                                        style: TextStyle(color: Colors.white),
-                                        decoration: InputDecoration(
-                                          enabledBorder: UnderlineInputBorder(
-                                            //<-- SEE HERE
-                                            borderSide: BorderSide(
-                                                width: 2,
-                                                color: Color.fromRGBO(
-                                                    255, 255, 255, 0.4)),
-                                          ),
-                                          hintText: 'Last Name',
-                                          hintStyle: TextStyle(
-                                            color: Color.fromRGBO(
-                                                255, 255, 255, 0.4),
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      //width: 400,
-                                      child: TextField(
-                                        style: TextStyle(color: Colors.white),
-                                        decoration: InputDecoration(
-                                          enabledBorder: UnderlineInputBorder(
-                                            //<-- SEE HERE
-                                            borderSide: BorderSide(
-                                                width: 2,
-                                                color: Color.fromRGBO(
-                                                    255, 255, 255, 0.4)),
-                                          ),
-                                          hintText: 'Phone number',
-                                          hintStyle: TextStyle(
-                                            color: Color.fromRGBO(
-                                                255, 255, 255, 0.4),
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      //width: 400,
-                                      child: TextField(
-                                        style: TextStyle(color: Colors.white),
-                                        decoration: InputDecoration(
-                                          enabledBorder: UnderlineInputBorder(
-                                            //<-- SEE HERE
-                                            borderSide: BorderSide(
-                                                width: 2,
-                                                color: Color.fromRGBO(
-                                                    255, 255, 255, 0.4)),
-                                          ),
-                                          hintText: 'Contry',
-                                          hintStyle: TextStyle(
-                                            color: Color.fromRGBO(
-                                                255, 255, 255, 0.4),
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      //width: 400,
-                                      child: TextField(
-                                        style: TextStyle(color: Colors.white),
-                                        decoration: InputDecoration(
-                                          enabledBorder: UnderlineInputBorder(
-                                            //<-- SEE HERE
-                                            borderSide: BorderSide(
-                                                width: 2,
-                                                color: Color.fromRGBO(
-                                                    255, 255, 255, 0.4)),
-                                          ),
-                                          hintText: 'City',
+                                          hintText: 'Confirm Password',
                                           hintStyle: TextStyle(
                                             color: Color.fromRGBO(
                                                 255, 255, 255, 0.4),
