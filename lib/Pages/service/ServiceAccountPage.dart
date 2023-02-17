@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:servicefinder/responsive.dart';
+import 'package:servicefinder/Widgets/responsive.dart';
 
 class ServiceAccountPage extends StatefulWidget {
   const ServiceAccountPage({super.key});

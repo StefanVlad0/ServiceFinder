@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:servicefinder/responsive.dart';
+import 'package:servicefinder/Widgets/responsive.dart';
 import 'package:go_router/go_router.dart';
-import 'login_page.dart';
+import '../login_page.dart';
 
 class SignInPageService extends StatefulWidget {
   const SignInPageService({super.key});
@@ -12,12 +12,20 @@ class SignInPageService extends StatefulWidget {
 }
 
 class _SignInPageServiceState extends State<SignInPageService> {
+  final _countryList = ["Romania", "Anglia", "Danemarca"];
+  String? _selectedCountry;
+  _SignInPageServiceState() {
+    _selectedCountry = _countryList[0];
+  }
+
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
+    //variables
     final _formKey = GlobalKey<FormState>();
+
     String? _countryValue;
     String? _cityValue;
+
     return Responsive(
         mobile: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -414,72 +422,25 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                 padding: const EdgeInsets.only(
                                                     left: 15, right: 15),
                                                 child: DropdownButton(
-                                                  hint: Text("Country",
-                                                      style: GoogleFonts.outfit(
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                      )),
-                                                  value: _countryValue,
-                                                  items: [
-                                                    DropdownMenuItem(
-                                                        child: Text("All",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "All"),
-                                                    DropdownMenuItem(
-                                                        child: Text("5 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "5 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("4 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "4 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("3 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "3 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("2 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "2 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("1 star",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "1 star"),
-                                                  ],
-                                                  onChanged: (String? value) =>
-                                                      setState(() {
-                                                    _countryValue = value ?? "";
-                                                  }),
+                                                  value: _selectedCountry,
+                                                  items: _countryList
+                                                      .map((e) =>
+                                                          DropdownMenuItem(
+                                                            child: Text(
+                                                              e,
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .white),
+                                                            ),
+                                                            value: e,
+                                                          ))
+                                                      .toList(),
+                                                  onChanged: (val) {
+                                                    setState(() {
+                                                      _selectedCountry =
+                                                          val as String;
+                                                    });
+                                                  },
                                                   underline: Container(),
                                                   iconEnabledColor:
                                                       Colors.white,

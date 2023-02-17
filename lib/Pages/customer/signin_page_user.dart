@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:servicefinder/responsive.dart';
+import 'package:servicefinder/Widgets/responsive.dart';
 import 'package:go_router/go_router.dart';
-import 'login_page.dart';
+import '../login_page.dart';
 
 class SignInPageUser extends StatefulWidget {
   const SignInPageUser({super.key});

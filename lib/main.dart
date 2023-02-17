@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router/go_router.dart';
-import 'package:servicefinder/ServiceAccountPage.dart';
-import 'package:servicefinder/TypeOfAcc.dart';
-import 'package:servicefinder/UserAccountPage.dart';
-import 'package:servicefinder/login_page.dart';
-import 'package:servicefinder/signin_page_service.dart';
-import 'package:servicefinder/signin_page_user.dart';
-import 'first_page.dart';
+import 'package:servicefinder/Pages/service/ServiceAccountPage.dart';
+import 'package:servicefinder/Pages/TypeOfAcc.dart';
+import 'package:servicefinder/Pages/customer/UserAccountPage.dart';
+import 'package:servicefinder/Pages/login_page.dart';
+import 'package:servicefinder/Pages/service/signin_page_service.dart';
+import 'package:servicefinder/Pages/customer/signin_page_user.dart';
+import 'Pages/first_page.dart';
 
 void main() {
   runApp(const MyApp());
