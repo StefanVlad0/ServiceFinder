@@ -412,69 +412,77 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                         ),
                                         Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
+                                              MainAxisAlignment.start,
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: [
-                                            DecoratedBox(
-                                              decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      width: 4,
-                                                      color: Color.fromRGBO(
-                                                          255, 255, 255, 0.2)),
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(
-                                                              50.0))),
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 15, right: 15),
-                                                child: DropdownButton(
-                                                  value: _selectedCountry,
-                                                  items: _countryList
-                                                      .map((e) =>
-                                                          DropdownMenuItem(
-                                                            child: Text(
-                                                              e,
-                                                              style: TextStyle(
-                                                                  color: Colors
-                                                                      .white),
-                                                            ),
-                                                            value: e,
-                                                          ))
-                                                      .toList(),
-                                                  onChanged: (val) {
-                                                    setState(() {
-                                                      _selectedCountry =
-                                                          val as String;
-                                                    });
-                                                  },
-                                                  underline: Container(),
-                                                  iconEnabledColor:
-                                                      Colors.white,
-                                                  dropdownColor: Color.fromRGBO(
-                                                      67, 67, 67, 1),
+                                            Expanded(
+                                              flex: 3,
+                                              child: DecoratedBox(
+                                                decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                        width: 4,
+                                                        color: Color.fromRGBO(
+                                                            255,
+                                                            255,
+                                                            255,
+                                                            0.2)),
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                            Radius.circular(
+                                                                25.0))),
+                                                child: Center(
+                                                  child: DropdownButton(
+                                                    value: _selectedCountry,
+                                                    items: _countryList
+                                                        .map((e) =>
+                                                            DropdownMenuItem(
+                                                              child: Text(
+                                                                e,
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .white),
+                                                              ),
+                                                              value: e,
+                                                            ))
+                                                        .toList(),
+                                                    onChanged: (val) {
+                                                      setState(() {
+                                                        _selectedCountry =
+                                                            val as String;
+                                                      });
+                                                    },
+                                                    underline: Container(),
+                                                    iconEnabledColor:
+                                                        Colors.white,
+                                                    dropdownColor:
+                                                        Color.fromRGBO(
+                                                            67, 67, 67, 1),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                            DecoratedBox(
-                                              decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      width: 4,
-                                                      color: Color.fromRGBO(
-                                                          255, 255, 255, 0.2)),
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(
-                                                              50.0))),
-                                              child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15, right: 15),
-                                                  child:
-                                                      _selectedCountry ==
-                                                              _countryList[0]
-                                                          ? DropdownButton(
+                                            Expanded(
+                                              flex: 3,
+                                              child: DecoratedBox(
+                                                decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                        width: 4,
+                                                        color: Color.fromRGBO(
+                                                            255,
+                                                            255,
+                                                            255,
+                                                            0.2)),
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                            Radius.circular(
+                                                                50.0))),
+                                                child:
+                                                    _selectedCountry ==
+                                                            _countryList[0]
+                                                        ? Center(
+                                                            child:
+                                                                DropdownButton(
                                                               value:
                                                                   _selectedRomanianCity,
                                                               items:
@@ -509,11 +517,13 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                                           67,
                                                                           67,
                                                                           1),
-                                                            )
-                                                          : (_selectedCountry ==
-                                                                  _countryList[
-                                                                      1])
-                                                              ? DropdownButton(
+                                                            ),
+                                                          )
+                                                        : (_selectedCountry ==
+                                                                _countryList[1])
+                                                            ? Center(
+                                                                child:
+                                                                    DropdownButton(
                                                                   value:
                                                                       _selectedEnglandCity,
                                                                   items: _englandCities
@@ -547,8 +557,11 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                                           67,
                                                                           67,
                                                                           1),
-                                                                )
-                                                              : DropdownButton(
+                                                                ),
+                                                              )
+                                                            : Center(
+                                                                child:
+                                                                    DropdownButton(
                                                                   value:
                                                                       _selectedDanemarcaCity,
                                                                   items: _danemarcaCities
@@ -582,7 +595,9 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                                           67,
                                                                           67,
                                                                           1),
-                                                                )),
+                                                                ),
+                                                              ),
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -590,7 +605,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                     ),
                                   ),
                                   SizedBox(
-                                    width: 60,
+                                    width: 50,
                                   ),
                                   Expanded(
                                     flex: 2,
