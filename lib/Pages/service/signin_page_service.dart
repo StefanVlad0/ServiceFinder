@@ -13,16 +13,24 @@ class SignInPageService extends StatefulWidget {
 
 class _SignInPageServiceState extends State<SignInPageService> {
   final _countryList = ["Romania", "Anglia", "Danemarca"];
+  final _romanianCities = ["Bucharest", "Iasi", "Cluj", "Timisoara"];
+  final _englandCities = ["London", "Manchester", "York", "Liverpool"];
+  final _danemarcaCities = ["Copenhagen", "Esbjerg"];
   String? _selectedCountry;
+  String? _selectedRomanianCity;
+  String? _selectedEnglandCity;
+  String? _selectedDanemarcaCity;
   _SignInPageServiceState() {
     _selectedCountry = _countryList[0];
+    _selectedRomanianCity = _romanianCities[0];
+    _selectedEnglandCity = _englandCities[0];
+    _selectedDanemarcaCity = _danemarcaCities[0];
   }
 
   @override
   Widget build(BuildContext context) {
     //variables
     final _formKey = GlobalKey<FormState>();
-
     String? _countryValue;
     String? _cityValue;
 
@@ -460,83 +468,121 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                           Radius.circular(
                                                               50.0))),
                                               child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 15, right: 15),
-                                                child: DropdownButton(
-                                                  //value: "rating",
-                                                  hint: Text("City",
-                                                      style: GoogleFonts.outfit(
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                      )),
-                                                  value: _cityValue,
-                                                  items: [
-                                                    DropdownMenuItem(
-                                                        child: Text("All",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 15, right: 15),
+                                                  child:
+                                                      _selectedCountry ==
+                                                              _countryList[0]
+                                                          ? DropdownButton(
+                                                              value:
+                                                                  _selectedRomanianCity,
+                                                              items:
+                                                                  _romanianCities
+                                                                      .map((e) =>
+                                                                          DropdownMenuItem(
+                                                                            child:
+                                                                                Text(
+                                                                              e,
+                                                                              style: TextStyle(color: Colors.white),
+                                                                            ),
+                                                                            value:
+                                                                                e,
+                                                                          ))
+                                                                      .toList(),
+                                                              onChanged:
+                                                                  (city) {
+                                                                setState(() {
+                                                                  _selectedRomanianCity =
+                                                                      city
+                                                                          as String;
+                                                                });
+                                                              },
+                                                              underline:
+                                                                  Container(),
+                                                              iconEnabledColor:
                                                                   Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "All"),
-                                                    DropdownMenuItem(
-                                                        child: Text("5 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "5 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("4 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "4 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("3 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "3 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("2 stars",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "2 stars"),
-                                                    DropdownMenuItem(
-                                                        child: Text("1 star",
-                                                            style: GoogleFonts
-                                                                .outfit(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 18,
-                                                            )),
-                                                        value: "1 star"),
-                                                  ],
-                                                  onChanged: (String? value) =>
-                                                      setState(() {
-                                                    _cityValue = value ?? "";
-                                                  }),
-                                                  underline: Container(),
-                                                  iconEnabledColor:
-                                                      Colors.white,
-                                                  dropdownColor: Color.fromRGBO(
-                                                      67, 67, 67, 1),
-                                                ),
-                                              ),
+                                                              dropdownColor:
+                                                                  Color
+                                                                      .fromRGBO(
+                                                                          67,
+                                                                          67,
+                                                                          67,
+                                                                          1),
+                                                            )
+                                                          : (_selectedCountry ==
+                                                                  _countryList[
+                                                                      1])
+                                                              ? DropdownButton(
+                                                                  value:
+                                                                      _selectedEnglandCity,
+                                                                  items: _englandCities
+                                                                      .map((e) => DropdownMenuItem(
+                                                                            child:
+                                                                                Text(
+                                                                              e,
+                                                                              style: TextStyle(color: Colors.white),
+                                                                            ),
+                                                                            value:
+                                                                                e,
+                                                                          ))
+                                                                      .toList(),
+                                                                  onChanged:
+                                                                      (city) {
+                                                                    setState(
+                                                                        () {
+                                                                      _selectedEnglandCity =
+                                                                          city
+                                                                              as String;
+                                                                    });
+                                                                  },
+                                                                  underline:
+                                                                      Container(),
+                                                                  iconEnabledColor:
+                                                                      Colors
+                                                                          .white,
+                                                                  dropdownColor:
+                                                                      Color.fromRGBO(
+                                                                          67,
+                                                                          67,
+                                                                          67,
+                                                                          1),
+                                                                )
+                                                              : DropdownButton(
+                                                                  value:
+                                                                      _selectedDanemarcaCity,
+                                                                  items: _danemarcaCities
+                                                                      .map((e) => DropdownMenuItem(
+                                                                            child:
+                                                                                Text(
+                                                                              e,
+                                                                              style: TextStyle(color: Colors.white),
+                                                                            ),
+                                                                            value:
+                                                                                e,
+                                                                          ))
+                                                                      .toList(),
+                                                                  onChanged:
+                                                                      (city) {
+                                                                    setState(
+                                                                        () {
+                                                                      _selectedDanemarcaCity =
+                                                                          city
+                                                                              as String;
+                                                                    });
+                                                                  },
+                                                                  underline:
+                                                                      Container(),
+                                                                  iconEnabledColor:
+                                                                      Colors
+                                                                          .white,
+                                                                  dropdownColor:
+                                                                      Color.fromRGBO(
+                                                                          67,
+                                                                          67,
+                                                                          67,
+                                                                          1),
+                                                                )),
                                             ),
                                           ],
                                         ),
