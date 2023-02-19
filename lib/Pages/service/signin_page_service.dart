@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:servicefinder/Widgets/responsive.dart';
 import 'package:go_router/go_router.dart';
+import 'package:servicefinder/requests.dart';
 import '../login_page.dart';
 
 class SignInPageService extends StatefulWidget {
@@ -12,6 +13,14 @@ class SignInPageService extends StatefulWidget {
 }
 
 class _SignInPageServiceState extends State<SignInPageService> {
+  late Future<ResCountries> countries;
+
+  @override
+  void initState() {
+    super.initState();
+    countries = fetchCountries();
+  }
+
   final _countryList = ["Romania", "Anglia", "Danemarca"];
   final _romanianCities = ["Bucharest", "Iasi", "Cluj", "Timisoara"];
   final _englandCities = ["London", "Manchester", "York", "Liverpool"];
@@ -26,11 +35,11 @@ class _SignInPageServiceState extends State<SignInPageService> {
     _selectedEnglandCity = _englandCities[0];
     _selectedDanemarcaCity = _danemarcaCities[0];
   }
-
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     //variables
-    final _formKey = GlobalKey<FormState>();
+
     String? _countryValue;
     String? _cityValue;
 
@@ -314,6 +323,24 @@ class _SignInPageServiceState extends State<SignInPageService> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Expanded(
+                  child: FutureBuilder<ResCountries>(
+                    future: countries,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        return Text(
+                          snapshot.data!.count.toString(),
+                          style: TextStyle(color: Colors.white),
+                        );
+                      } else if (snapshot.hasError) {
+                        return Text('${snapshot.error}');
+                      }
+
+                      // By default, show a loading spinner.
+                      return const CircularProgressIndicator();
+                    },
+                  ),
+                ),
                 Expanded(
                   flex: 5,
                   child: Image.asset(

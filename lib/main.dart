@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:go_router/go_router.dart';
 import 'package:servicefinder/Pages/service/ServiceAccountPage.dart';
 import 'package:servicefinder/Pages/TypeOfAcc.dart';
 import 'package:servicefinder/Pages/customer/UserAccountPage.dart';
