@@ -437,18 +437,15 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                         SizedBox(
                                           height: 10,
                                         ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
+                                        Wrap(
+                                          direction: Axis.horizontal,
                                           children: [
                                             Expanded(
                                               flex: 3,
                                               child: DecoratedBox(
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
-                                                        width: 4,
+                                                        width: 3,
                                                         color: Color.fromRGBO(
                                                             255,
                                                             255,
@@ -458,42 +455,48 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                         BorderRadius.all(
                                                             Radius.circular(
                                                                 25.0))),
-                                                child: Center(
+                                                child: Expanded(
                                                   child: FutureBuilder<
                                                       ResCountries>(
                                                     future: countries,
                                                     builder:
                                                         (context, snapshot) {
                                                       if (snapshot.hasData) {
-                                                        return DropdownButton(
-                                                          value:
-                                                              _selectedCountry,
-                                                          hint: Text(
-                                                              'Select Country'),
-                                                          items: snapshot
-                                                              .data!.countries!
-                                                              .map(
-                                                            (list) {
-                                                              return DropdownMenuItem(
-                                                                child: Text(
-                                                                    list.name,
-                                                                    style: TextStyle(
-                                                                        color: Colors
-                                                                            .white)),
-                                                                value:
-                                                                    list.name,
-                                                              );
+                                                        return Center(
+                                                          child: DropdownButton(
+                                                            value:
+                                                                _selectedCountry,
+                                                            items: snapshot
+                                                                .data!
+                                                                .countries!
+                                                                .map(
+                                                              (list) {
+                                                                return DropdownMenuItem(
+                                                                  child: Text(
+                                                                      list.name,
+                                                                      style: TextStyle(
+                                                                          color:
+                                                                              Colors.white)),
+                                                                  value:
+                                                                      list.name,
+                                                                );
+                                                              },
+                                                            ).toList(),
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _selectedCountry =
+                                                                    value;
+                                                              });
                                                             },
-                                                          ).toList(),
-                                                          onChanged: (value) {
-                                                            setState(() {
-                                                              _selectedCountry =
-                                                                  value;
-                                                            });
-                                                          },
-                                                          dropdownColor:
-                                                              Color.fromRGBO(67,
-                                                                  67, 67, 1),
+                                                            dropdownColor:
+                                                                Color.fromRGBO(
+                                                                    67,
+                                                                    67,
+                                                                    67,
+                                                                    1),
+                                                            underline:
+                                                                Container(),
+                                                          ),
                                                         );
                                                       } else if (snapshot
                                                           .hasError) {
@@ -513,7 +516,7 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                               child: DecoratedBox(
                                                 decoration: BoxDecoration(
                                                     border: Border.all(
-                                                        width: 4,
+                                                        width: 3,
                                                         color: Color.fromRGBO(
                                                             255,
                                                             255,
