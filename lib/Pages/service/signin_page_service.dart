@@ -459,32 +459,51 @@ class _SignInPageServiceState extends State<SignInPageService> {
                                                             Radius.circular(
                                                                 25.0))),
                                                 child: Center(
-                                                  child: DropdownButton(
-                                                    value: _selectedCountry,
-                                                    items: _countryList
-                                                        .map((e) =>
-                                                            DropdownMenuItem(
-                                                              child: Text(
-                                                                e,
-                                                                style: TextStyle(
-                                                                    color: Colors
-                                                                        .white),
-                                                              ),
-                                                              value: e,
-                                                            ))
-                                                        .toList(),
-                                                    onChanged: (val) {
-                                                      setState(() {
-                                                        _selectedCountry =
-                                                            val as String;
-                                                      });
+                                                  child: FutureBuilder<
+                                                      ResCountries>(
+                                                    future: countries,
+                                                    builder:
+                                                        (context, snapshot) {
+                                                      if (snapshot.hasData) {
+                                                        return DropdownButton(
+                                                          value:
+                                                              _selectedCountry,
+                                                          hint: Text(
+                                                              'Select Country'),
+                                                          items: snapshot
+                                                              .data!.countries!
+                                                              .map(
+                                                            (list) {
+                                                              return DropdownMenuItem(
+                                                                child: Text(
+                                                                    list.name,
+                                                                    style: TextStyle(
+                                                                        color: Colors
+                                                                            .white)),
+                                                                value:
+                                                                    list.name,
+                                                              );
+                                                            },
+                                                          ).toList(),
+                                                          onChanged: (value) {
+                                                            setState(() {
+                                                              _selectedCountry =
+                                                                  value;
+                                                            });
+                                                          },
+                                                          dropdownColor:
+                                                              Color.fromRGBO(67,
+                                                                  67, 67, 1),
+                                                        );
+                                                      } else if (snapshot
+                                                          .hasError) {
+                                                        return Text(
+                                                            '${snapshot.error}');
+                                                      }
+
+                                                      // By default, show a loading spinner.
+                                                      return const CircularProgressIndicator();
                                                     },
-                                                    underline: Container(),
-                                                    iconEnabledColor:
-                                                        Colors.white,
-                                                    dropdownColor:
-                                                        Color.fromRGBO(
-                                                            67, 67, 67, 1),
                                                   ),
                                                 ),
                                               ),
